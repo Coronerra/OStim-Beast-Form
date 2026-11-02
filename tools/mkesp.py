@@ -19,6 +19,6 @@ body += sub('DNAM',bytes.fromhex('110100ff0000000000000000'))+sub('NEXT',b'')+su
 body += sub('ALST',struct.pack('<I',0))+sub('ALID',zs('PlayerAlias'))+sub('FNAM',struct.pack('<I',0))+sub('ALFR',struct.pack('<I',0x14))+sub('VTCK',struct.pack('<I',0))+sub('ALED',b'')
 q = rec('QUST',QID,body)
 hedr = struct.pack('<fII',1.71,1,0x801)
-tes4 = sub('HEDR',hedr)+sub('CNAM',zs('coronerra'))+sub('SNAM',zs('OStim Beast Form v0.1 - OStim scenes as a werewolf (player)'))+sub('MAST',zs('Skyrim.esm'))+sub('DATA',struct.pack('<Q',0))
+tes4 = sub('HEDR',hedr)+sub('CNAM',zs('That Guy (Coronerra)'))+sub('SNAM',zs('OStim Beast Form v0.1 - OStim scenes as a werewolf (player)'))+sub('MAST',zs('Skyrim.esm'))+sub('DATA',struct.pack('<Q',0))
 out = rec('TES4',0,tes4,flags=0x200)+grup('QUST',q)
 open('OStim_Beast_Form.esp','wb').write(out); print(len(out))
