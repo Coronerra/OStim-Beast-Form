@@ -30,6 +30,15 @@ Vanilla beast form switches off NPC activation: no crosshair prompt, no "E", and
 - ✔️ NPC-initiated scenes (via OStimNet/SkyrimNet) in beast form work
 - ✔️ Hotkey start in beast form works
 
+### 🧪 Tested on
+
+Developed and tested in-game on a **modified Nolvus 6.0.21** build (Skyrim SE 1.5.97) with a werewolf overhaul and creature body mod installed:
+
+- 🐺 **[Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245)**
+- 🍆 **[BakaFactory Animated Beasts Cocks (ABC)](https://www.loverslab.com/files/file/7556-animated-beasts-cocksabc-for-users-le-se/)**, with the **Furry Works** option selected in ABC's installer
+
+**Nolvus players, you're welcome here.** The mod works on the beast-form *race*, not the body mesh, so werewolf body replacers and overhauls like these are fine.
+
 ## ⚙️ How it works
 
 1. **Custom hotkey.** Beast form disables NPC activation and the crosshair prompt, so the mod listens for its own key instead of OStim's.
@@ -82,7 +91,7 @@ This mod stands on **OCreatures Reforged** and Lirael's creature animation packs
 ## ⚠️ Known limits
 
 - Werewolf scenes are **male werewolf + female partner** only (that's what the packs provide).
-- **Vanilla beast form only** (`WerewolfBeastRace`). Werebear and custom transformation mods aren't handled.
+- Works with the standard werewolf beast-form race (`WerewolfBeastRace`), which overhauls like Growl and body/mesh replacers like ABC keep using. Werebear form and mods that add a *brand-new* transformation race aren't handled yet.
 - Player-only werewolf skin/body mods may be affected by OStim's undressing.
 - Scenes **can't start in combat**.
 
