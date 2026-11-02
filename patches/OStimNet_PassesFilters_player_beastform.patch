@@ -1,0 +1,17 @@
+diff --git a/SKSE_Source/src/ActorUtils.h b/SKSE_Source/src/ActorUtils.h
+index 30b2379..de3fdf8 100644
+--- a/SKSE_Source/src/ActorUtils.h
++++ b/SKSE_Source/src/ActorUtils.h
+@@ -109,7 +109,11 @@ inline std::vector<RE::Actor*> GetNearbyActors(
+             if (!race) return false;
+             static RE::BGSKeyword* s_kwActorTypeNPC =
+                 RE::TESForm::LookupByEditorID<RE::BGSKeyword>("ActorTypeNPC");
+-            if (!KeywordUtils::FormHasKeyword(race, s_kwActorTypeNPC)) return false;
++            // OStim Beast Form option: let the PLAYER through while in vanilla werewolf beast form.
++            static RE::TESRace* s_werewolfBeastRace =
++                RE::TESForm::LookupByID<RE::TESRace>(0x000CDD84);  // Skyrim.esm WerewolfBeastRace
++            const bool playerBeast = target->IsPlayerRef() && s_werewolfBeastRace && race == s_werewolfBeastRace;
++            if (!playerBeast && !KeywordUtils::FormHasKeyword(race, s_kwActorTypeNPC)) return false;
+         }
+         if (IsInFactionByEditorID(target, "SexLabAnimatingFaction")) return false;
+         if (IsInFactionByEditorID(target, "TTON_OStimPending")) return false;
