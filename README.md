@@ -12,6 +12,8 @@
 
 ---
 
+> **Current release:** [OStim Beast Form Merged 0.5](https://github.com/Coronerra/OStim-Beast-Form-Merged) ([LoversLab](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/)). This repository is the earlier standalone v0.1 plugin (no race edits; only `Skyrim.esm` as a master).
+
 > 🔞 **Adult mod.** For adults 18+ only. All characters are adults. The mod refuses to start scenes with child actors.
 
 ## 🩸 What it does
@@ -65,6 +67,15 @@ Developed and tested in-game on a **modified Nolvus 6.0.21** build (Skyrim SE 1.
 3. Load a save and give **SkyUI** a minute to register the MCM (or save and reload).
 4. Open **OStim Beast Form** in the MCM and set the **Start scene hotkey**.
 5. Turn into a werewolf, get out of combat, face your partner up close, and press the hotkey. 🌕
+
+
+## 🐺 Growl and other werewolf overhauls
+
+This v0.1 plugin does **not** require Growl. Its only plugin master is `Skyrim.esm`. It was tested on a modified Nolvus setup that included [Growl - Werebeasts of Skyrim](https://www.nexusmods.com/skyrimspecialedition/mods/31245), but the scripts only care that you are the standard `WerewolfBeastRace` (`Skyrim.esm` `0x000CDD84`) and, during OStim scenes, they pause the vanilla timer `PlayerWerewolfShiftBackTime` (`Skyrim.esm` `0x0002BA19`).
+
+Vanilla werewolves, Twilight Werewolf Overhaul, Growl, or any other overhaul should work with this v0.1 plugin as long as they still use that standard race and (for the timer pause) that vanilla timer global. A brand-new transformation race is not handled.
+
+**The merged 0.5 plugin is different:** `Growl - Werebeasts of Skyrim.esp` is a hard master, because its werewolf race override was built on Growl's race record. See [Growl dependence in the Merged 0.5 README](https://github.com/Coronerra/OStim-Beast-Form-Merged#growl-dependence) for how to retarget 0.5 to vanilla, Twilight Werewolf Overhaul, or another overhaul.
 
 ## 📋 Requirements
 
