@@ -12,7 +12,7 @@
 
 ---
 
-> **Current release:** [OStim Beast Form Merged 0.5](https://github.com/Coronerra/OStim-Beast-Form-Merged) ([LoversLab](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/)). This repository is the earlier standalone v0.1 plugin (no race edits; only `Skyrim.esm` as a master).
+> **Current release:** [OStim Beast Form Merged 0.6](https://github.com/Coronerra/OStim-Beast-Form-Merged) ([v0.6 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.6), [LoversLab](https://www.loverslab.com/files/file/52768-ostim-beast-form-merged/)). Using TWO - Total Werewolf Overhaul 4.1 instead of Growl? See [OStim Beast Form - TWO Edition 0.2](https://github.com/Coronerra/OStim-Beast-Form-TWO) or, to keep a Merged save, the [Merged TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch). This repository is the earlier standalone v0.1 plugin (no race edits; only `Skyrim.esm` as a master).
 
 > 🔞 **Adult mod.** For adults 18+ only. All characters are adults. The mod refuses to start scenes with child actors.
 
@@ -75,7 +75,7 @@ This v0.1 plugin does **not** require Growl. Its only plugin master is `Skyrim.e
 
 Vanilla werewolves, Twilight Werewolf Overhaul, Growl, or any other overhaul should work with this v0.1 plugin as long as they still use that standard race and (for the timer pause) that vanilla timer global. A brand-new transformation race is not handled.
 
-**The merged 0.5 plugin is different:** `Growl - Werebeasts of Skyrim.esp` is a hard master, because its werewolf race override was built on Growl's race record. See [Growl dependence in the Merged 0.5 README](https://github.com/Coronerra/OStim-Beast-Form-Merged#growl-dependence) for how to retarget 0.5 to vanilla, Twilight Werewolf Overhaul, or another overhaul.
+**The merged plugin (0.5 and later) is different:** `Growl - Werebeasts of Skyrim.esp` is a hard master, because its werewolf race override was built on Growl's race record. See [Growl dependence in the Merged README](https://github.com/Coronerra/OStim-Beast-Form-Merged#growl-dependence) for how to retarget it to vanilla, Twilight Werewolf Overhaul, or another overhaul.
 
 ## 📋 Requirements
 
