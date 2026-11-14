@@ -1,3 +1,11 @@
+> ## ⚠️ Deprecated: use OStim Beast Form Merged 0.7
+>
+> This project is no longer updated. **[OStim Beast Form Merged 0.7](https://github.com/Coronerra/OStim-Beast-Form-Merged)** replaces it: one download with one installer for Growl and TWO users, all on the TWO body ([v0.7 release](https://github.com/Coronerra/OStim-Beast-Form-Merged/releases/tag/v0.7)).
+>
+> Everything from this mod has been part of OStim Beast Form Merged since its first version. Disable this mod if you install Merged. See [Updating to 0.7](https://github.com/Coronerra/OStim-Beast-Form-Merged#updating-to-07).
+>
+> This repo and its old releases stay up for reference.
+
 <div align="center">
 
 # 🐺🌕 OStim Beast Form 🌕🐺
