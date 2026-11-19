@@ -9,6 +9,8 @@
 
 Play as a werewolf, werebear or Vampire Lord in OStim with your mind intact.
 
+> **Note:** Vampire Lord bodies and werebear bodies are not included yet, but the framework for them is already built in and waiting. Scenes, skin-swap and body hooks are ready for when suitable bodies are available.
+
 > **This is the main OStim Beast Form repository again.** Everything for OStim Beast Form is downloaded from here: the mod, its optional patches, the animation patch for Werewolf and Vampire Lord OStim 0.3.1 and Ostrands with Werewolves.
 >
 > The older repositories are **superseded by this one** and are no longer updated: [OStim Beast Form Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged), [OStim Beast Form - TWO Edition](https://github.com/Coronerra/OStim-Beast-Form-TWO), [OStim Beast Form Merged - TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch) and [OStim Beast Form TWO Herm Patch](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch). (The readme and installer inside the 1.0.1 zip still name the Merged repository as the source; this repository replaces it.)
