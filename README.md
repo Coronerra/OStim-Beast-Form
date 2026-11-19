@@ -1,3 +1,6 @@
+<div align="center">
+
+
 # OStim Beast Form 1.0.1
 
 ![OStim Beast Form](docs/OStim_Beast_Form_cover.jpg)
