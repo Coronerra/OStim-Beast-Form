@@ -51,6 +51,8 @@ MD5 checksums are listed in the release notes.
 - Growl core: werebears, with MCM "Werebears use werewolf scenes" (on by default).
 - **Own log file** for bug reports (new in 1.0.1, see [Troubleshooting](#troubleshooting)).
 
+If you like this file, wait until you see what happens when you combine it with O'Deadly Skyrim (https://github.com/Coronerra/ODeadly-Skyrim/)
+
 ---
 
 ## 📋 Requirements (everyone)
