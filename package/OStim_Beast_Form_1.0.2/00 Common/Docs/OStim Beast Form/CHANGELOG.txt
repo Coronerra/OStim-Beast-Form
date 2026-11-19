@@ -1,3 +1,20 @@
+OStim Beast Form 1.0.2
+- Fix for TWO users: BodySlide presets for TWO's female werewolf body
+  were ignored. 1.0 / 1.0.1 pointed the female werewolf body at this
+  mod's converted softbody body for core B (TWO) and the Growl + TWO
+  add-on even without softbody. New installer page for those two
+  setups, "Female werewolf body":
+  * TWO's own female body (BodySlide works), recommended: TWO's body and
+    TWO's own aroused cock, same as "No softbody" in 0.8.x.
+  * Converted softbody female body: this mod's body and cock, same as
+    "Yes, softbody" in 0.8.x and as 1.0 / 1.0.1.
+- Only the body and cock paths in OStim_Beast_Form_TWO.esp (core B) and
+  OStim_Beast_Form_Merged_TWO_Patch.esp change. Same plugin names,
+  FormIDs and records, so saves keep working. Vanilla and Growl-only
+  setups are unchanged.
+- Docs: source link now https://github.com/Coronerra/OStim-Beast-Form,
+  BodySlide notes updated.
+
 OStim Beast Form 1.0.1
 - Own log file for troubleshooting: Data\SKSE\Plugins\OStimBeastForm.log
   (MO2: overwrite). Header and startup block every game load (version,

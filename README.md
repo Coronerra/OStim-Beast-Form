@@ -1,7 +1,7 @@
 <div align="center">
 
 
-# OStim Beast Form 1.0.1
+# OStim Beast Form 1.0.2
 
 ![OStim Beast Form](docs/OStim_Beast_Form_cover.jpg)
 
@@ -13,16 +13,18 @@ Play as a werewolf, werebear or Vampire Lord in OStim with your mind intact.
 
 > **This is the main OStim Beast Form repository again.** Everything for OStim Beast Form is downloaded from here: the mod, its optional patches, the animation patch for Werewolf and Vampire Lord OStim 0.3.1 and Ostrands with Werewolves.
 >
-> The older repositories are **superseded by this one** and are no longer updated: [OStim Beast Form Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged), [OStim Beast Form - TWO Edition](https://github.com/Coronerra/OStim-Beast-Form-TWO), [OStim Beast Form Merged - TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch) and [OStim Beast Form TWO Herm Patch](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch). (The readme and installer inside the 1.0.1 zip still name the Merged repository as the source; this repository replaces it.)
+> The older repositories are **superseded by this one** and are no longer updated: [OStim Beast Form Merged](https://github.com/Coronerra/OStim-Beast-Form-Merged), [OStim Beast Form - TWO Edition](https://github.com/Coronerra/OStim-Beast-Form-TWO), [OStim Beast Form Merged - TWO Patch](https://github.com/Coronerra/OStim-Beast-Form-Merged-TWO-Patch) and [OStim Beast Form TWO Herm Patch](https://github.com/Coronerra/OStim-Beast-Form-TWO-Herm-Patch).
 
-## 📥 Downloads ([v1.0.1 release](https://github.com/Coronerra/OStim-Beast-Form/releases/tag/v1.0.1))
+> **New in 1.0.2: BodySlide fix for TWO users.** 1.0 and 1.0.1 always gave female werewolves this mod's converted softbody body, even with TWO (core B) or Growl + TWO, so BodySlide builds of TWO's female body were ignored. The installer now asks which female body you want; pick **TWO's own female body (BodySlide works)**. See [Switching from 1.0 / 1.0.1](#switching-102).
+
+## 📥 Downloads ([v1.0.2 release](https://github.com/Coronerra/OStim-Beast-Form/releases/tag/v1.0.2))
 
 | File | What it is | Who needs it |
 |---|---|---|
-| `OStim_Beast_Form_1.0.1.zip` | **The mod.** One FOMOD installer for vanilla, TWO and Growl setups. | Everyone |
+| `OStim_Beast_Form_1.0.2.zip` | **The mod.** One FOMOD installer for vanilla, TWO and Growl setups. | Everyone |
 | `WVL_0.3.1_Patch_0.2.zip` | **Animation patch** for Lirael Atelier's *Werewolf and Vampire Lord OStim v0.3.1*: new menu icons, plus human-first copies of the female werewolf scenes so a human man and a female werewolf can start a scene. **Requires her 0.3.1 pack. Contains no animations.** | Recommended for everyone using her 0.3.1 pack |
-| `OStim_Beast_Form_1.0.1_Softbody_Tullius_Patches.zip` | The matching `OCumMaleScript` for GT Softbody and/or Tull Animated Creampie + Liquid Pack. | Only GT Softbody or Tull / Liquid Pack users |
-| `OStim_Beast_Form_1.0.1_Herm_Patch.zip` | **Herm / Futa Patch** (A.K.A. Fruta) for TWO Extras' herm / urta **player** werewolf. | Only TWO Extras herm / urta users (TWO or Growl + TWO setups) |
+| `OStim_Beast_Form_1.0.2_Softbody_Tullius_Patches.zip` | The matching `OCumMaleScript` for GT Softbody and/or Tull Animated Creampie + Liquid Pack. | Only GT Softbody or Tull / Liquid Pack users |
+| `OStim_Beast_Form_1.0.1_Herm_Patch.zip` | **Herm / Futa Patch** (A.K.A. Fruta) for TWO Extras' herm / urta **player** werewolf. Unchanged, works with 1.0.2. | Only TWO Extras herm / urta users (TWO or Growl + TWO setups) |
 | `Ostrands_with_Werewolves_0.8.0.3.zip` | **OStrands patch**: drop-in OStrands DLL with female werewolf support. GPL v3, [source](https://github.com/Coronerra/Ostrands-with-Werewolves). | Optional, only if you use OStrands |
 
 MD5 checksums are listed in the release notes.
@@ -46,7 +48,7 @@ MD5 checksums are listed in the release notes.
 - Vampire Lords can be sex partners when the NPC wants it (SkyrimNet / OStimNet).
 - SkyrimNet: NPCs are told when someone transforms, while they're transformed, and when they turn back.
 - Big loads (OCum, MCM, on by default) for werewolves and werebears; Beast Pie keeps the OCum / Tull / Liquid creampie through beast form.
-- Converted female werewolf body (SMP opening that reacts to TNG and SOS) and converted male cock (SMP collision with UNP / CBBE / UBE bodies).
+- Converted female werewolf body (SMP opening that reacts to TNG and SOS) and converted male cock (SMP collision with UNP / CBBE / UBE bodies). TWO and Growl + TWO players choose it in the installer, or keep TWO's own female body so BodySlide works. Vanilla and Growl-only setups always use it.
 - BFA expression morphs for werewolf and Vampire Lord heads.
 - Growl core: werebears, with MCM "Werebears use werewolf scenes" (on by default).
 - **Own log file** for bug reports (new in 1.0.1, see [Troubleshooting](#troubleshooting)).
@@ -83,7 +85,7 @@ Per setup:
 <a id="before-you-install-remove-old-versions"></a>
 ## 🧹 Before you install: remove old versions
 
-OStim Beast Form 1.0.1 replaces **every** earlier OStim Beast Form download. In MO2, **disable or remove** all of these before you install (keep your save; see [Existing saves](#existing-saves)):
+OStim Beast Form 1.0.2 replaces **every** earlier OStim Beast Form download. In MO2, **disable or remove** all of these before you install (keep your save; see [Existing saves](#existing-saves)):
 
 - **OStim Beast Form Merged** (0.5 – 0.8.1)
 - **OStim Beast Form - TWO Edition** (0.1 – 0.2)
@@ -92,7 +94,7 @@ OStim Beast Form 1.0.1 replaces **every** earlier OStim Beast Form download. In 
 - The original **OStim Beast Form** 0.1, and the old Beast Lite, Beast Aware, OCum Beast Pie and BeastForm BFA Heads mods
 - **WVL 0.3.1 Icon Patch 0.1** (replaced by WVL 0.3.1 Patch 0.2)
 - The separate **OCum-Tull-Liquid-Softbody-Patch** if you install the Softbody / Tullius Patches (same script)
-- Coming from 1.0: just install 1.0.1 over it with the same choices (MO2: **Replace**).
+- Coming from 1.0 or 1.0.1: install 1.0.2 over it (MO2: **Replace**). TWO and Growl + TWO players get one new page (female werewolf body), see [Switching from 1.0 / 1.0.1](#switching-102).
 
 ---
 
@@ -102,6 +104,7 @@ OStim Beast Form 1.0.1 replaces **every** earlier OStim Beast Form download. In 
 |---|---|---|
 | 1 | **Which werewolf setup do you use?** (pick ONE) | **A. Vanilla / FSMP (no TWO, no Growl)** · **B. TWO 4.1 user (no Growl)** · **C. Growl user** (recommended for Nolvus) |
 | 2 | **Growl + TWO?** (only shown for C) | **Growl only** or **Growl + TWO 4.1** (adds `OStim_Beast_Form_Merged_TWO_Patch.esp` and its BFA Heads plugin) |
+| 2b | **Female werewolf body** (only shown for B and for C + Growl + TWO; new in 1.0.2) | **TWO's own female body (BodySlide works)** (recommended: TWO's body and TWO's own aroused cock, same as 0.8.x "No softbody") or **Converted softbody female body** (this mod's body and cock, for GT Softbody; BodySlide doesn't change it) |
 | 3 | **Do you use OCreatures Reforged (`OCreatures.esp`)?** | **Yes** (nothing extra installed; OCR's files are never replaced) or **No** (installs this mod's own werewolf and Vampire Lord start poses under the names other packs look for). Pre-selected from your load order. |
 | 4 | **Beast couples (optional)** | Tick only if you have Lirael's Werewolf and Vampire Lord OStim (`WVLAnimObj.esp`). Pre-ticked when it is enabled. |
 | 5 | **Read and acknowledge** | Required. |
@@ -115,13 +118,13 @@ For players with **neither TWO nor Growl** (vanilla werewolves, FSMP).
 1. **Remove old versions** (see above).
 2. **Install the animation source:** Lirael's Werewolf and Vampire Lord OStim **v0.3.1** with its own installer (or another OStim pack with werewolf scenes). Optional: OCreatures Reforged.
 3. **Make the TWO Core Files mod** (see [TWO Core Files](#two-core-files)). Do **not** enable TWO's `Werewolves.esp`.
-4. **Install `OStim_Beast_Form_1.0.1.zip`** in MO2:
+4. **Install `OStim_Beast_Form_1.0.2.zip`** in MO2:
    - Page 1: **A. Vanilla / FSMP**
    - Page 3: **Yes** if you use OCreatures Reforged, otherwise **No**
    - Page 4: tick **Beast couples** if you installed Lirael's pack
 5. **Install the animation patch** `WVL_0.3.1_Patch_0.2.zip` (if you use her 0.3.1 pack): tick the **same** animation packs, animators and male-partner option you chose for 0.3.1.
 6. **Optional patches:** Softbody / Tullius Patches if you use GT Softbody or Tull / Liquid Pack; Ostrands with Werewolves if you use OStrands. The Herm / Futa Patch does **not** work with core A (TWO Extras needs TWO's plugin).
-7. **MO2 left pane (mods), top to bottom** (see [Load order](#load-order)): OStim, OCum (and GT Softbody / Tull add-on) → OCreatures Reforged (optional) → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.1** → Softbody / Tullius Patches → **TWO Core Files** (below OCR so TWO's skeleton and body win) → Pandora Output.
+7. **MO2 left pane (mods), top to bottom** (see [Load order](#load-order)): OStim, OCum (and GT Softbody / Tull add-on) → OCreatures Reforged (optional) → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.2** → Softbody / Tullius Patches → **TWO Core Files** (below OCR so TWO's skeleton and body win) → Pandora Output.
 8. **Plugins (right pane):** `OStim_Beast_Form_TWO.esp` (core A uses the same plugin name as core B) after `OStim.esp`, `OCum.esp` and `OCreatures.esp`.
 9. **Run Pandora** (or your behavior engine), then start the game.
 
@@ -132,14 +135,15 @@ For players using **TWO - Total Werewolf Overhaul 4.1 without Growl**.
 1. **Remove old versions**, especially **OStim Beast Form - TWO Edition**, the **TWO Patch** and the old **TWO Herm Patch**.
 2. **Install TWO 4.1** (Core) and **Monster Facial Animation** if you haven't. Keep HDT Werewolves off.
 3. **Install the animation source:** Lirael's Werewolf and Vampire Lord OStim **v0.3.1** (optional: OCreatures Reforged).
-4. **Install `OStim_Beast_Form_1.0.1.zip`** in MO2:
+4. **Install `OStim_Beast_Form_1.0.2.zip`** in MO2:
    - Page 1: **B. TWO 4.1 user (no Growl)**
+   - Female werewolf body: **TWO's own female body (BodySlide works)**, unless you want this mod's converted softbody body
    - Page 3: **Yes** / **No** for OCreatures Reforged
    - Page 4: tick **Beast couples** if you installed Lirael's pack
    You don't need the TWO Core Files mod: TWO itself provides those files.
 5. **Install the animation patch** `WVL_0.3.1_Patch_0.2.zip` (same ticks as your 0.3.1 install).
 6. **Optional patches:** Softbody / Tullius Patches; **Herm / Futa Patch** if you play TWO Extras' herm / urta werewolf (needs `WerewolvesExtras.esp`; leave OStim's "Futas use male role" on); Ostrands with Werewolves.
-7. **MO2 left pane, top to bottom** (see [Load order](#load-order)): OStim, OCum → OCreatures Reforged → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.1** → Softbody / Tullius Patches → Herm / Futa Patch → **TWO 4.1** (and TWO Extras, below OCR so TWO's skeleton and body win) → Pandora Output.
+7. **MO2 left pane, top to bottom** (see [Load order](#load-order)): OStim, OCum → OCreatures Reforged → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.2** → Softbody / Tullius Patches → Herm / Futa Patch → **TWO 4.1** (and TWO Extras, below OCR so TWO's skeleton and body win) → Pandora Output.
 8. **Plugins (right pane), in this order:** `MonsterLipSync1.esp` → `OCreatures.esp` (optional) → `Werewolves.esp` (then any other `Werewolves*.esp`) → **`OStim_Beast_Form_TWO.esp`** → **`OStim_Beast_Form_TWO - BFA Heads.esp`** → `OStim_Beast_Form_TWO_Herm_Patch.esp` (herm only). `Werewolves.esp` must load **after** `OCreatures.esp` or TWO's heads go missing; our plugins go after TWO so our race edits win.
 9. **Run Pandora**, then start the game.
 
@@ -151,14 +155,15 @@ For players using **Growl - Werebeasts of Skyrim** (the Nolvus default). This is
 2. **Make sure Growl, JS Emissive Eyes SE and Monster Facial Animation are installed** (Nolvus has them). Keep HDT Werewolves off (see [Must be off](#must-be-off)).
 3. **Install the animation source:** Lirael's Werewolf and Vampire Lord OStim **v0.3.1** (optional: OCreatures Reforged).
 4. **Growl only:** make the **TWO Core Files** mod (see [TWO Core Files](#two-core-files)); TWO's plugin stays off. **Growl + TWO:** install TWO 4.1 Core with its Growl patch instead.
-5. **Install `OStim_Beast_Form_1.0.1.zip`** in MO2:
+5. **Install `OStim_Beast_Form_1.0.2.zip`** in MO2:
    - Page 1: **C. Growl user**
    - Page 2: **Growl only**, or **Growl + TWO 4.1** if TWO is enabled
+   - Growl + TWO only, female werewolf body: **TWO's own female body (BodySlide works)**, unless you want this mod's converted softbody body
    - Page 3: **Yes** / **No** for OCreatures Reforged
    - Page 4: tick **Beast couples** if you installed Lirael's pack
 6. **Install the animation patch** `WVL_0.3.1_Patch_0.2.zip` (same ticks as your 0.3.1 install).
 7. **Optional patches:** Softbody / Tullius Patches (Nolvus users with GT Softbody / Tull: pick the matching option); **Herm / Futa Patch** only with **Growl + TWO** and TWO Extras (also `WerewolvesExtrasGrowl.esp`); Ostrands with Werewolves.
-8. **MO2 left pane, top to bottom** (see [Load order](#load-order)): OStim, OCum (GT Softbody, Tull add-on) → Monster Facial Animation, Growl → OCreatures Reforged → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.1** → Softbody / Tullius Patches → Herm / Futa Patch → **TWO Core Files** (Growl only) or **TWO 4.1** (Growl + TWO), below OCR → Pandora Output → *(Nolvus: the Paper Maps mods stay at the very bottom)*.
+8. **MO2 left pane, top to bottom** (see [Load order](#load-order)): OStim, OCum (GT Softbody, Tull add-on) → Monster Facial Animation, Growl → OCreatures Reforged → Werewolf and Vampire Lord OStim 0.3.1 → **WVL 0.3.1 Patch 0.2** → OStrands → Ostrands with Werewolves → **OStim Beast Form 1.0.2** → Softbody / Tullius Patches → Herm / Futa Patch → **TWO Core Files** (Growl only) or **TWO 4.1** (Growl + TWO), below OCR → Pandora Output → *(Nolvus: the Paper Maps mods stay at the very bottom)*.
 9. **Plugins (right pane):** `Growl - Werebeasts of Skyrim.esp`, `JS Emissive Eyes SE - Johnskyrim.esp`, `MonsterLipSync1.esp`, `OCreatures.esp` (optional), (`Werewolves.esp` for Growl + TWO) → **`OStim_Beast_Form_Merged.esp`** → (Growl + TWO only) **`OStim_Beast_Form_Merged_TWO_Patch.esp`** directly below it, then `OStim_Beast_Form_Merged_TWO_Patch - BFA Heads.esp` → `OStim_Beast_Form_TWO_Herm_Patch.esp` (herm only).
    - **Nolvus: never put any plugin below Paper Maps.** Keep these plugins **above** `FWMF for Fantasy Paper Maps.esp` and the other Paper Map plugins (the last of them is `Nolvus Awakening Paper Map Patch.esp`). Don't run LOOT; place plugins by hand.
 10. **Run Pandora**, then start the game.
@@ -169,7 +174,7 @@ For players using **Growl - Werebeasts of Skyrim** (the Nolvus default). This is
 ## 📑 Load order
 
 **Left pane (MO2, lower wins file conflicts):**
-- OStim Beast Form 1.0.1 ships **no** files that other mods ship (it never edits OCreatures Reforged or any animation pack), so its exact slot is flexible. Keep it below OStim, OCum, OCR and your animation packs.
+- OStim Beast Form 1.0.2 ships **no** files that other mods ship (it never edits OCreatures Reforged or any animation pack), so its exact slot is flexible. Keep it below OStim, OCum, OCR and your animation packs.
 - **WVL 0.3.1 Patch 0.2 must be below Werewolf and Vampire Lord OStim 0.3.1** (it overwrites some of her scene files).
 - **Softbody / Tullius Patches must be below** OCum Ascended, GT - Softbody and the OCum Tull/Liquid add-on (its `OCumMaleScript.pex` must win).
 - **Ostrands with Werewolves must be below OStrands** (its DLL must win).
@@ -234,7 +239,7 @@ Only for TWO Extras' herm / urta **player** werewolf ("Toggle Herm Werewolf"). W
 > **I am not going to test this myself.** If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the OStim Beast Form page on LoversLab.
 
 ### OStrands patch: Ostrands with Werewolves 0.8.0.3
-A drop-in replacement for the OStrands DLL that adds **female werewolf** support. No new build is needed for 1.0.1: every core uses TWO's werewolf skeleton, which has every bone OStrands uses, and female werewolves get TWO's real vagina and anus bones.
+A drop-in replacement for the OStrands DLL that adds **female werewolf** support. No new build is needed for 1.0.2: every core uses TWO's werewolf skeleton, which has every bone OStrands uses, and female werewolves get TWO's real vagina and anus bones.
 - Requires [OStrands](https://www.nexusmods.com/skyrimspecialedition/mods/195115) by LeonVanWinkle (Saint) and its requirements.
 - Install it **below OStrands** so its DLL wins (or untick the original and put this in its slot). No plugin, no Pandora run.
 - Based on the [OStrands creature support patch](https://www.loverslab.com/files/file/52392-ostrands-creature-support-patch-for-sexlabocreatures) by Keevan2374, with contributions from crajjjj. GNU GPL v3; the license comes in the zip and the full source is at [Coronerra/Ostrands-with-Werewolves](https://github.com/Coronerra/Ostrands-with-Werewolves).
@@ -244,7 +249,15 @@ A drop-in replacement for the OStrands DLL that adds **female werewolf** support
 <a id="existing-saves"></a>
 ## 💾 New game or existing save
 
-- **From 1.0:** install 1.0.1 over it with the same choices. Scripts and docs only; plugins, FormIDs and assets are unchanged.
+- **From 1.0 / 1.0.1:** install 1.0.2 over it. Same plugin names, FormIDs and records; only the female body and cock paths in the TWO and Growl + TWO plugins change.
+
+<a id="switching-102"></a>
+### Switching from 1.0 / 1.0.1 (TWO and Growl + TWO players)
+1. In MO2, install `OStim_Beast_Form_1.0.2.zip` over your old OStim Beast Form mod (**Replace**), with the same choices as before.
+2. On the new **Female werewolf body** page pick **TWO's own female body (BodySlide works)**.
+3. Your existing BodySlide output for TWO's "TWO Female Body" works as is; no rebuild needed. Keep the BodySlide output mod **below TWO 4.1** in the left pane. (If you never built it, the stock TWO body is used.)
+4. No new game needed. Save-safe: same plugins and FormIDs.
+Vanilla (core A) and Growl-only players: nothing changes for you.
 - **From Merged 0.8.x:** plugin names and FormIDs are the same, so saves keep working. Remove the old version, run the new installer, run Pandora.
 - **From Merged 0.8.x with the Hermaphrodite option:** install the Herm / Futa Patch; it is the same plugin and scripts.
 - Lirael's role-swap scenes and the menu edits for her pack from 0.8.x are gone; this mod no longer edits any animation pack.
@@ -270,8 +283,8 @@ A drop-in replacement for the OStrands DLL that adds **female werewolf** support
 
 | Path | Contents |
 |---|---|
-| `package/OStim_Beast_Form_1.0.1/` | The installer tree of the main zip: FOMOD, plugins, compiled scripts and sources, OStim scene and actor JSON, SkyrimNet files, this mod's own / converted meshes |
-| `package/Softbody_Tullius_Patches_1.0.1/` | The Softbody / Tullius Patches installer tree |
+| `package/OStim_Beast_Form_1.0.2/` | The installer tree of the main zip: FOMOD, plugins, compiled scripts and sources, OStim scene and actor JSON, SkyrimNet files, this mod's own / converted meshes |
+| `package/Softbody_Tullius_Patches_1.0.2/` | The Softbody / Tullius Patches installer tree |
 | `package/Herm_Futa_Patch_1.0.1/` | The Herm / Futa Patch installer tree |
 | `patches/WVL_0.3.1_Patch_0.2/` | The WVL 0.3.1 Patch 0.2 installer tree (icons, icon-edited and human-first scene JSON; no animations) |
 | `src/` | Papyrus sources for every core and patch, and the SkyrimNet bundles |

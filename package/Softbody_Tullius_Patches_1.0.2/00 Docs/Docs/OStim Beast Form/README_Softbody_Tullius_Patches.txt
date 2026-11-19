@@ -1,4 +1,4 @@
-Beast Form Softbody / Tullius Patches 1.0.1 (optional, for OStim Beast Form 1.0.1)
+Beast Form Softbody / Tullius Patches 1.0.2 (optional, for OStim Beast Form 1.0.2)
 by That Guy (Coronerra)
 
 What it is: ONE file, Scripts\OCumMaleScript.pex, picked for your setup.
@@ -6,9 +6,12 @@ OCum, GT Softbody's OCum patch, the OCum Tull/Liquid add-on and this patch
 all ship that same file, so only one can win. This installer gives you
 the one that matches what you use.
 
-The converted female werewolf body and cock are already in the main file
-for everyone (they work with or without GT Softbody), so this download
-has no meshes.
+This download has no meshes and no plugin. The converted softbody female
+werewolf body and cock are in the main file. TWO and Growl + TWO users
+pick them in the MAIN installer (page "Female werewolf body":
+"Converted softbody female body"); "TWO's own female body" keeps TWO's
+body, so BodySlide builds apply. Vanilla and Growl-only setups always
+use the converted body. The script here is the same as in 1.0.1.
 
 Choices:
 - GT Softbody (with or without Tull / Liquid Pack): my OCum + Tull/Liquid

@@ -2,7 +2,7 @@
 import sys, os, itertools
 from lxml import etree
 P = sys.argv[1]
-xsd = etree.XMLSchema(etree.parse("/workspace/skyrim/bf10/tools/xsd/ModConfig5.0.xsd"))
+xsd = etree.XMLSchema(etree.parse(os.path.join(os.path.dirname(os.path.abspath(__file__)), "xsd", "ModConfig5.0.xsd")))
 doc = etree.parse(f"{P}/fomod/ModuleConfig.xml")
 ok = xsd.validate(doc)
 print(('PASS' if ok else 'FAIL'), 'XSD validation', '' if ok else xsd.error_log)
@@ -10,10 +10,16 @@ etree.parse(f"{P}/fomod/info.xml"); print('PASS info.xml well-formed')
 r = doc.getroot()
 req = [f.get('source') for f in r.findall('requiredInstallFiles/*')]
 steps = r.findall('installSteps/installStep')
+def dep_ok(dep, flags):
+    res = []
+    for c in dep:
+        if c.tag == 'flagDependency': res.append(flags.get(c.get('flag')) == c.get('value'))
+        elif c.tag == 'dependencies': res.append(dep_ok(c, flags))
+    return any(res) if dep.get('operator') == 'Or' else all(res)
 def flags_vis(step, flags):
     v = step.find('visible/dependencies')
     if v is None: return True
-    return all(flags.get(d.get('flag')) == d.get('value') for d in v.findall('flagDependency'))
+    return dep_ok(v, flags)
 # enumerate: for each step all legal selections
 def choices(step):
     out = []

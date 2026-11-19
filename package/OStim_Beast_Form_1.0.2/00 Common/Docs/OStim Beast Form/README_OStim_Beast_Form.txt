@@ -1,6 +1,6 @@
-OStim Beast Form 1.0.1 (Skyrim SE / AE)
+OStim Beast Form 1.0.2 (Skyrim SE / AE)
 by That Guy (Coronerra)
-Technical readme and source: https://github.com/Coronerra/OStim-Beast-Form-Merged
+Technical readme and source: https://github.com/Coronerra/OStim-Beast-Form
 
 Play as a werewolf, werebear or Vampire Lord in OStim with your mind intact.
 
@@ -11,8 +11,11 @@ THE SHORT VERSION
 2. Page 1, pick the ONE setup you use:
    A. Vanilla / FSMP: no TWO, no Growl
    B. TWO 4.1 (Total Werewolf Overhaul)
-   C. Growl (the Nolvus default). Growl + TWO users also tick
-      "I also use TWO 4.1" on the next page.
+   C. Growl (the Nolvus default). Growl + TWO users also pick
+      "Growl + TWO 4.1" on the next page.
+   B and Growl + TWO users then pick the female werewolf body:
+      "TWO's own female body (BodySlide works)" (recommended), or
+      "Converted softbody female body" (this mod's, for GT Softbody).
 3. The installer asks whether you use OCreatures Reforged. If you don't,
    it installs this mod's own werewolf and vampire lord start poses so
    other packs' buttons still show up.
@@ -62,6 +65,9 @@ WHAT YOU GET
 - Beast Pie keeps the OCum / Tull / Liquid creampie through beast form.
 - Converted female werewolf body (SMP opening that reacts to TNG and SOS)
   and converted male cock (SMP collision with UNP / CBBE / UBE bodies).
+  TWO and Growl + TWO users choose it in the installer; otherwise they
+  keep TWO's own female body and cock, so BodySlide builds apply.
+  Vanilla and Growl-only setups always use the converted body.
 - BFA expression morphs for werewolf and vampire lord heads.
 - Growl core: werebears. MCM "Werebears use werewolf scenes" (on by
   default; werebears use the werewolf skeleton). Off makes them their own
@@ -74,7 +80,7 @@ Everyone: OStim Standalone, OCum Ascended, SKSE, Address Library, SkyUI,
 PapyrusUtil, powerofthree's Papyrus Extender, XPMSSE, FSMP, Pandora, and an
 OStim pack with werewolf scenes. Vampire Lords: Monster Facial Animation
 (its meshes). Recommended: Lirael Atelier's Werewolf and Vampire Lord
-OStim 0.2.3.
+OStim 0.3.1.
 A (vanilla): the TWO 4.1 files listed in PUT_TWO_FILES_HERE.txt (the TWO
    plugin itself is NOT needed).
 B (TWO): TWO 4.1 Core and Monster Facial Animation (MonsterLipSync1.esp).
@@ -85,7 +91,8 @@ Werewolves.esp), ABC, Creature Framework, HCOS, SOS, SexLab.
 
 Optional downloads:
 - Beast Form Softbody / Tullius Patches: the OCum script for GT Softbody
-  and/or Tull Animated Creampie + Liquid Pack users.
+  and/or Tull Animated Creampie + Liquid Pack users. (The softbody
+  female body itself is picked in THIS installer, not in that one.)
 - Beast Form Herm Patch: for TWO Extras' herm / urta player werewolf.
 
 =====================================================================
@@ -120,8 +127,11 @@ BEFORE you load again.
 =====================================================================
 UPDATING FROM 0.8.x
 =====================================================================
-From 1.0: install 1.0.1 over it (same choices). Scripts and docs only;
-plugins, FormIDs and assets are unchanged.
+From 1.0 / 1.0.1: install 1.0.2 over it (MO2: Replace). TWO and
+Growl + TWO users get a new page: pick the female werewolf body. 1.0 and
+1.0.1 always used the converted softbody body, so BodySlide builds of
+TWO's female body were ignored; "TWO's own female body" fixes that.
+Same plugin names, FormIDs and records, so saves keep working.
 Plugin names and FormIDs are the same, so saves keep working. Remove the
 old version (MO2: install as "Replace"), then run the new installer.
 Lirael's role-swap scenes and the menu edits for her pack are gone in 1.0:
