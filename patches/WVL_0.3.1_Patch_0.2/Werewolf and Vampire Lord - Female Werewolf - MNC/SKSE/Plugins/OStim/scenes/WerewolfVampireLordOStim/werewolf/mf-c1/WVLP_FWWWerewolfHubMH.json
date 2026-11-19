@@ -1,0 +1,51 @@
+{
+    "name": "Female Werewolf Pack [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 2,
+    "navigations": [
+        {
+            "origin": "WVLP_WerewolfIdleMH",
+            "description": "Female Werewolf Pack",
+            "icon": "WVLIcons/werewolf/FemaleWerewolfHub",
+            "priority": -100
+        },
+        {
+            "destination": "WVLP_WerewolfIdleMH",
+            "description": "Return",
+            "icon": "OStim/symbols/return",
+            "priority": -1000
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfMissionaryTest_S1"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "standing"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "standing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "tags": [
+        "idle",
+        "intro",
+        "hub",
+        "creature",
+        "werewolf",
+        "packfemalewerewolf",
+        "malefirst"
+    ],
+    "noRandomSelection": true
+}

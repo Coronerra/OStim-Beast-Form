@@ -1,0 +1,66 @@
+{
+    "name": "MNC (Female Werewolf) Doggystyle 2 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "destination": "WVLP_MNCWerewolfBehindTestMH-3",
+            "description": "Next(climax)",
+            "icon": "OStim/symbols/climax"
+        },
+        {
+            "destination": "WVLP_FWWWerewolfHubMH",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfBehindTest_S2"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "kneeling"
+            ],
+            "feetOnGround": false,
+            "autoTransitions": {
+                "climax": "WVLMNCWerewolfBehindTest-3"
+            },
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "autoTransitions": {
+                "climax": "WVLMNCWerewolfBehindTest-3"
+            },
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "doggystyle",
+        "holding",
+        "vaginal",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "malefirst"
+    ]
+}

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+    <moduleName>Werewolf and Vampire Lord OStim 0.3.1 Patch</moduleName>
+    <requiredInstallFiles>
+        <folder source="00 Common\interface" destination="interface" priority="0" />
+        <file source="README.txt" destination="README.txt" priority="0" />
+    </requiredInstallFiles>
+    <installSteps order="Explicit">
+        <installStep name="Animation packs">
+            <optionalFileGroups order="Explicit">
+                <group name="Animation packs (tick the same ones you chose in 0.3.1)" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Werewolf">
+                            <description>Icon edits for the male werewolf packs you installed from 0.3.1. If 0.3.1 is already installed, this should pre-tick when those files are found. Tick it only if you installed the Werewolf pack.</description>
+                            <conditionFlags>
+                                <flag name="Module_Werewolf">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\BWWBPilD\WVLBWWBPilD-1.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\AnubsWWchainedup\WVLAnubsWWchainedup-6.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\Flufywwfootjob\WVLFlufywwfootjob-5.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedone-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mmmm-c3\WVLIdleWWMWerewolfMMMMC3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\AnubsWWchainedup\WVLAnubsWWchainedupM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\Flufywwfootjob\WVLFlufywwfootjobM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01M-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedoneM-4.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Female Werewolf">
+                            <description>Icon edits plus human-first (male human, female werewolf) scene copies for the Female Werewolf pack. Tick this if you installed Female Werewolf in 0.3.1. This is the fix for "no valid animations" when a man starts a scene with a female werewolf.</description>
+                            <conditionFlags>
+                                <flag name="Module_FemaleWerewolf">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\MNCWerewolfMissionaryTest\WVLMNCWerewolfMissionaryTest-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\mmgfemwerenpc69\WVLmmgfemwerenpc69-5.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Vampire Lord">
+                            <description>Icon edits for the Vampire Lord packs you installed from 0.3.1. Tick this only if you installed the Vampire Lord pack.</description>
+                            <conditionFlags>
+                                <flag name="Module_VampireLord">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\BVampBMiss\WVLBVampBMiss-3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\Anubsvlstanding\WVLAnubsvlstanding-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\BaboVampireblowjob\WVLBaboVampireblowjob-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutal-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BVampBMiss\WVLBVampBMissM-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\Anubsvlstanding\WVLAnubsvlstandingM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BaboVampireblowjob\WVLBaboVampireblowjobM-1.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutalM-3.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Beast Couples">
+                            <description>Icon edits for the Beast Couples pack from 0.3.1. Tick this only if you installed Beast Couples.</description>
+                            <conditionFlags>
+                                <flag name="Module_BeastCouples">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="And">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c2\WVLCCVampireLordHubFMC2.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+        <installStep name="Animators">
+            <optionalFileGroups order="Explicit">
+                <group name="Animators (tick the same ones you chose in 0.3.1)" type="SelectAny">
+                    <plugins order="Explicit">
+                        <plugin name="Billyy">
+                            <description>Patch files for Billyy's 0.3.1 scenes only. Tick this only if you installed Billyy in 0.3.1. The installer pre-ticks it when those files are already in your game.</description>
+                            <conditionFlags>
+                                <flag name="Source_BILLYY">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\BWWBPilD\WVLBWWBPilD-1.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\BVampBMiss\WVLBVampBMiss-3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mmmm-c3\WVLIdleWWMWerewolfMMMMC3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BVampBMiss\WVLBVampBMissM-4.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Anub">
+                            <description>Patch files for Anub's 0.3.1 scenes only. Tick this only if you installed Anub in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="Source_ANUB">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\AnubsWWchainedup\WVLAnubsWWchainedup-6.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\Anubsvlstanding\WVLAnubsvlstanding-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\AnubsWWchainedup\WVLAnubsWWchainedupM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\Anubsvlstanding\WVLAnubsvlstandingM-2.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="FlufyFox">
+                            <description>Patch files for FlufyFox's 0.3.1 scenes only. Leave this unticked if you did not install FlufyFox in 0.3.1 — otherwise OStim will load orphan scenes that point at missing stages.</description>
+                            <conditionFlags>
+                                <flag name="Source_FLUFY">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\Flufywwfootjob\WVLFlufywwfootjob-5.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\Flufywwfootjob\WVLFlufywwfootjobM-2.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Baka">
+                            <description>Patch files for Baka's 0.3.1 scenes only. Tick this only if you installed Baka in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="Source_BAKA">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\BaboVampireblowjob\WVLBaboVampireblowjob-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01M-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BaboVampireblowjob\WVLBaboVampireblowjobM-1.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="MNC">
+                            <description>Patch files for MNC's 0.3.1 scenes only, including human-first Female Werewolf copies when that pack is ticked. Tick this only if you installed MNC in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="Source_MNC">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedone-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\MNCWerewolfMissionaryTest\WVLMNCWerewolfMissionaryTest-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedoneM-4.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="HCOS">
+                            <description>Patch files for HCOS's 0.3.1 scenes only, including human-first Female Werewolf copies when that pack is ticked. Tick this only if you installed HCOS in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="Source_HCOS">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\fm-c1\mmgfemwerenpc69\WVLmmgfemwerenpc69-5.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c2\WVLCCVampireLordHubFMC2.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="FunnyBiz">
+                            <description>Patch files for FunnyBiz's 0.3.1 scenes only. Tick this only if you installed FunnyBiz in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="Source_FUNNYBIZ">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\fm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutal-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutalM-3.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+        <installStep name="Male partner">
+            <optionalFileGroups order="Explicit">
+                <group name="Scenes with a male partner" type="SelectExactlyOne">
+                    <plugins order="Explicit">
+                        <plugin name="No">
+                            <description>Do not install male-partner icon edits. Choose this if you did not add male partner scenes in 0.3.1.</description>
+                            <conditionFlags>
+                                <flag name="MalePartner">Off</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Recommended" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mmmm-c3\WVLIdleWWMWerewolfMMMMC3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\AnubsWWchainedup\WVLAnubsWWchainedupM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\Flufywwfootjob\WVLFlufywwfootjobM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01M-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedoneM-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BVampBMiss\WVLBVampBMissM-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\Anubsvlstanding\WVLAnubsvlstandingM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BaboVampireblowjob\WVLBaboVampireblowjobM-1.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutalM-3.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Optional" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                        <plugin name="Yes, add male partner scenes">
+                            <description>Install icon edits for the 0.3.1 male-partner scenes. Choose this only if you added male partner scenes in 0.3.1, and only for the packs and animators you ticked above.</description>
+                            <conditionFlags>
+                                <flag name="MalePartner">On</flag>
+                            </conditionFlags>
+                            <typeDescriptor>
+                                <dependencyType>
+                                    <defaultType name="Optional" />
+                                    <patterns>
+                                        <pattern>
+                                            <dependencies operator="Or">
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mmmm-c3\WVLIdleWWMWerewolfMMMMC3.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\AnubsWWchainedup\WVLAnubsWWchainedupM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\Flufywwfootjob\WVLFlufywwfootjobM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\BaboWerewolfDefeated01\WVLBaboWerewolfDefeated01M-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\werewolf\mm-c1\MNCWerewolfRedone\WVLMNCWerewolfRedoneM-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BVampBMiss\WVLBVampBMissM-4.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\Anubsvlstanding\WVLAnubsvlstandingM-2.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\BaboVampireblowjob\WVLBaboVampireblowjobM-1.json" state="Active" />
+                                                <fileDependency file="SKSE\Plugins\OStim\scenes\WerewolfVampireLordOStim\vampirelord\mm-c1\FBCVampLordBrutal\WVLFBCVampLordBrutalM-3.json" state="Active" />
+                                            </dependencies>
+                                            <type name="Recommended" />
+                                        </pattern>
+                                    </patterns>
+                                </dependencyType>
+                            </typeDescriptor>
+                        </plugin>
+                    </plugins>
+                </group>
+            </optionalFileGroups>
+        </installStep>
+    </installSteps>
+    <conditionalFileInstalls>
+        <patterns>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_BILLYY" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf - Billyy\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_ANUB" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf - Anub\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_FLUFY" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf - FlufyFox\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_BAKA" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf - Baka\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_MNC" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf - MNC\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_FemaleWerewolf" value="On" />
+                    <flagDependency flag="Source_MNC" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Female Werewolf - MNC\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_FemaleWerewolf" value="On" />
+                    <flagDependency flag="Source_HCOS" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Female Werewolf - HCOS\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_BILLYY" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord - Billyy\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_ANUB" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord - Anub\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_BAKA" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord - Baka\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_FUNNYBIZ" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord - FunnyBiz\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_BeastCouples" value="On" />
+                    <flagDependency flag="Source_HCOS" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Beast Couples - HCOS\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_BILLYY" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf (male partner) - Billyy\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_ANUB" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf (male partner) - Anub\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_FLUFY" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf (male partner) - FlufyFox\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_BAKA" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf (male partner) - Baka\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_Werewolf" value="On" />
+                    <flagDependency flag="Source_MNC" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Werewolf (male partner) - MNC\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_BILLYY" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord (male partner) - Billyy\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_ANUB" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord (male partner) - Anub\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_BAKA" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord (male partner) - Baka\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+            <pattern>
+                <dependencies operator="And">
+                    <flagDependency flag="Module_VampireLord" value="On" />
+                    <flagDependency flag="Source_FUNNYBIZ" value="On" />
+                    <flagDependency flag="MalePartner" value="On" />
+                </dependencies>
+                <files>
+                    <folder source="Werewolf and Vampire Lord - Vampire Lord (male partner) - FunnyBiz\SKSE" destination="SKSE" priority="0" />
+                </files>
+            </pattern>
+        </patterns>
+    </conditionalFileInstalls>
+</config>

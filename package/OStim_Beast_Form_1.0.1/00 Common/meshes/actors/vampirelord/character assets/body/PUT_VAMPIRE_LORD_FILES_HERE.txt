@@ -1,0 +1,8 @@
+PUT_VAMPIRE_LORD_FILES_HERE
+OStim Beast Form 1.0 - That Guy (Coronerra)
+
+Not included because I didn't change these files (they belong to their authors).
+If Monster Facial Animation (and an aroused Vampire Lord mesh) are installed, they're already in place and you can ignore this note.
+
+This folder: vampirelord.nif, vampirelordfemale.nif
+  = the headless Vampire Lord bodies from Monster Facial Animation (MFA).

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="description.xsd">
+  <!--Collision Meshes-->
+  <per-vertex-shape name="Collision Penis">
+    <margin>0.5</margin>
+    <penetration>1</penetration>
+    <shared>public</shared>
+    <tag>penis</tag>
+    <!--OBF Softbody: also tagged like GT Softbody creature cocks so GT's vaginal/anal guide tubes react-->
+    <tag>VirtualPenis</tag>
+  </per-vertex-shape>
+</system>

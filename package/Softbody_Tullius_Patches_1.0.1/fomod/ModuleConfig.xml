@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Beast Form Softbody / Tullius Patches 1.0.1</moduleName>
+  <requiredInstallFiles>
+    <folder source="00 Docs" destination="" priority="0"/>
+  </requiredInstallFiles>
+  <installSteps order="Explicit">
+    <installStep name="Tullius / Liquid Pack">
+      <optionalFileGroups order="Explicit">
+        <group name="Do you use Tull Animated Creampie and/or Liquid Pack v2 with OCum (dwemermods 5304)?" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Yes">
+              <description>You use the OCum Tull/Liquid add-on (https://dwemermods.com/mods/5304) with Tull Animated Creampie and/or [Predator] Liquid Pack v2.</description>
+              <conditionFlags>
+                <flag name="tull">yes</flag>
+              </conditionFlags>
+              <typeDescriptor>
+                <dependencyType>
+                  <defaultType name="Optional"/>
+                  <patterns>
+                    <pattern>
+                      <dependencies operator="Or">
+                        <fileDependency file="TullAnimatedCreampie.esp" state="Active"/>
+                        <fileDependency file="[Predator] Liquid Pack v2.esp" state="Active"/>
+                      </dependencies>
+                      <type name="Recommended"/>
+                    </pattern>
+                  </patterns>
+                </dependencyType>
+              </typeDescriptor>
+            </plugin>
+            <plugin name="No">
+              <description>You don't use Tull Animated Creampie or Liquid Pack v2.</description>
+              <conditionFlags>
+                <flag name="tull">no</flag>
+              </conditionFlags>
+              <typeDescriptor>
+                <type name="Optional"/>
+              </typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+    <installStep name="GT Softbody">
+      <optionalFileGroups order="Explicit">
+        <group name="Do you use GT - Softbody (Nexus 152103)?" type="SelectExactlyOne">
+          <plugins order="Explicit">
+            <plugin name="Yes">
+              <description>GT - Softbody by Goutou is installed and working (https://www.nexusmods.com/skyrimspecialedition/mods/152103). Installs the merged OCum + Tull/Liquid + GT Softbody script.</description>
+              <conditionFlags>
+                <flag name="gt">yes</flag>
+              </conditionFlags>
+              <typeDescriptor>
+                <type name="Optional"/>
+              </typeDescriptor>
+            </plugin>
+            <plugin name="No">
+              <description>You don't use GT - Softbody.</description>
+              <conditionFlags>
+                <flag name="gt">no</flag>
+              </conditionFlags>
+              <typeDescriptor>
+                <type name="Optional"/>
+              </typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+  <conditionalFileInstalls>
+    <patterns>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="gt" value="yes"/>
+        </dependencies>
+        <files>
+          <folder source="20 Script GT Softbody" destination="" priority="0"/>
+        </files>
+      </pattern>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="gt" value="no"/>
+          <flagDependency flag="tull" value="yes"/>
+        </dependencies>
+        <files>
+          <folder source="21 Script Tullius no Softbody" destination="" priority="0"/>
+        </files>
+      </pattern>
+    </patterns>
+  </conditionalFileInstalls>
+</config>

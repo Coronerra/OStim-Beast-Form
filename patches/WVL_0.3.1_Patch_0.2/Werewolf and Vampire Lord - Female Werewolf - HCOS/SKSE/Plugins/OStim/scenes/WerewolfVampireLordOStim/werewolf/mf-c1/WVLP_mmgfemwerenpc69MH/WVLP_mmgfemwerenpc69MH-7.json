@@ -1,0 +1,62 @@
+{
+    "name": "HCoS (Female Werewolf) 69ing a FemWolf 7 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 23.333334,
+    "speeds": [
+        {
+            "animation": "WVL_mmgfemwerenpc69_S7"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "sosBend": 2,
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "blowjob",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        },
+        {
+            "type": "cunnilingus",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "hcos",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "69",
+        "facesit",
+        "blowjob",
+        "vaginal",
+        "sixtynine",
+        "facesitting",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "transition",
+        "malefirst"
+    ],
+    "noRandomSelection": true,
+    "destination": "WVLmmgfemwerenpc69-6"
+}

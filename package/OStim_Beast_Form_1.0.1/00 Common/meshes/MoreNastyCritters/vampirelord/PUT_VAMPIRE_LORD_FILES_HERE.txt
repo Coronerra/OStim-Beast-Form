@@ -1,0 +1,8 @@
+PUT_VAMPIRE_LORD_FILES_HERE
+OStim Beast Form 1.0 - That Guy (Coronerra)
+
+Not included because I didn't change these files (they belong to their authors).
+If Monster Facial Animation (and an aroused Vampire Lord mesh) are installed, they're already in place and you can ignore this note.
+
+This folder: vampirelord_Hard.nif
+  = the aroused Vampire Lord body (More Nasty Critters / OCreatures Reforged). Without it, Vampire Lords just keep their normal body in scenes.

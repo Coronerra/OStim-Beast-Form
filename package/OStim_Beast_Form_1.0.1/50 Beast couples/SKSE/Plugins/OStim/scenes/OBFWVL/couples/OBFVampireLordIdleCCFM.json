@@ -1,0 +1,44 @@
+{
+	"name": "OBFVampireLordIdleCCFM",
+	"modpack": "OBeastLite",
+	"length": 2,
+	"navigations": [
+		{
+			"destination": "WVLCCVampireLordHubFMC2",
+			"description": "Beast Couples Pack",
+			"icon": "OCreatures/vampirelord/vampirelord"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgvamponvamp_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "VampireLord",
+			"intendedSex": "female",
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"type": "VampireLord",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"vampirelord",
+		"hub",
+		"obfunlock"
+	]
+}

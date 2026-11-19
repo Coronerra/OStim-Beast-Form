@@ -1,0 +1,31 @@
+OStim Beast Form 1.0.1
+- Own log file for troubleshooting: Data\SKSE\Plugins\OStimBeastForm.log
+  (MO2: overwrite). Header and startup block every game load (version,
+  core, mods found, race checks, OCR keywords, scene registrations, MCM
+  settings), then beast scenes / beast couple scenes, start-key failures,
+  timer pause / resume, climaxes and loads, Beast Pie, aroused-body
+  swaps, Beast Aware form changes. Lines still go to Papyrus.0.log.
+- MCM: "Write log file" (ON by default). Restarts after 10 game loads,
+  at most 2000 lines per load. PapyrusUtil soft check: without it,
+  nothing is written.
+- Scripts and docs only. Plugins, FormIDs, meshes and textures unchanged.
+  No animation pack is touched.
+
+OStim Beast Form 1.0 (box build, not released)
+- New installer: three cores (A vanilla / B TWO / C Growl), an OCreatures
+  Reforged question, optional Beast couples, optional Growl + TWO add-on.
+- Core A (new): no TWO plugin needed. Same plugin name and FormIDs as the
+  TWO core; its own head-part records (TWO-style heads you copy in).
+- Growl core: werebears (OStim actor properties, MCM "Werebears use
+  werewolf scenes", aroused werebear skin without OCR).
+- No animation pack is edited any more: Lirael role swaps, her menu edits
+  and the OCreatures scene overrides are gone. The OCR stand-in start
+  poses install only when OCreatures Reforged isn't installed.
+- Converted female body and cock for everyone (one plugin per core, no
+  softbody variants). The OCum script moved to the Softbody / Tullius
+  download, the herm patch to its own download.
+- Big loads: werewolves and werebears only (MCM label updated).
+- Hotkey works in werebear form.
+- SkyrimNet: one shared pack for every core, simpler Vampire Lord line,
+  werebear partner note.
+- BFA head morph files ship in this mod's own folders.

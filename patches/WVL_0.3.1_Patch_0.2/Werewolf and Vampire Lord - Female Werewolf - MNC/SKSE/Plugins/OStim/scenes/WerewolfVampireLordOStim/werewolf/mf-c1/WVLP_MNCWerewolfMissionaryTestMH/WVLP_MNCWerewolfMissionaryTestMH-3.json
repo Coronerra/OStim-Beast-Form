@@ -1,0 +1,54 @@
+{
+    "name": "MNC (Female Werewolf) Missionary 3 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 15,
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfMissionaryTest_S3"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "kneeling",
+                "climaxing"
+            ],
+            "feetOnGround": false,
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "missionary",
+        "vaginal",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "transition",
+        "malefirst"
+    ],
+    "noRandomSelection": true,
+    "destination": "WVLMNCWerewolfMissionaryTest-2"
+}

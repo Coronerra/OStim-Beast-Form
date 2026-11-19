@@ -1,0 +1,59 @@
+{
+    "name": "Anubs Werewolf Doggy 1",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLWWWerewolfHubFMC1",
+            "description": "Anubs Werewolf Doggy",
+            "icon": "WVLIcons/werewolf/FemHumanFromBehindByMaleWW"
+        },
+        {
+            "destination": "WVLAnubsWerewolfdoggy-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLWWWerewolfHubFMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_AnubsWerewolfdoggy_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ]
+        },
+        {
+            "intendedSex": "female"
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "anubs",
+        "dirty",
+        "vaginal",
+        "creature",
+        "bestiality",
+        "werewolf",
+        "anub",
+        "packwerewolf",
+        "converted",
+        "slal"
+    ]
+}

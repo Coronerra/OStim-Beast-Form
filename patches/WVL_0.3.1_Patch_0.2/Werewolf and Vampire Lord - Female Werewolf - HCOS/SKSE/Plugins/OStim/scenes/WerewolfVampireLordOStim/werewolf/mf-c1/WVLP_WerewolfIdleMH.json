@@ -1,0 +1,36 @@
+{
+    "name": "Female Werewolf Idle [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 2,
+    "navigations": [],
+    "speeds": [
+        {
+            "animation": "WVL_mmgfemwerenpcstand_S1"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "standing"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "standing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "tags": [
+        "idle",
+        "intro",
+        "creature",
+        "werewolf",
+        "packfemalewerewolf",
+        "malefirst"
+    ]
+}

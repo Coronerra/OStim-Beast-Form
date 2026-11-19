@@ -1,0 +1,63 @@
+{
+    "name": "HCoS Werewolves Missionary 2 [male-first order]",
+    "modpack": "OBeastLite",
+    "length": 6,
+    "navigations": [
+        {
+            "destination": "OBFWVLmmgwerewolvesmissionaryMF-3",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "OBFWVLCCHubMF",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_mmgwerewolvesmissionary_S2"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "hcos",
+        "creature",
+        "cc",
+        "samerace",
+        "a1",
+        "a2",
+        "werewolf",
+        "missionary",
+        "loving",
+        "romantic",
+        "packbeastcouples",
+        "converted",
+        "slal",
+        "vaginal",
+        "femwerewolf",
+        "obfmalefirst"
+    ]
+}

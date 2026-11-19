@@ -1,0 +1,6 @@
+PUT_WEREBEAR_FILES_HERE
+OStim Beast Form 1.0 (Growl core) - That Guy (Coronerra)
+
+Not included because I didn't change these files. Growl uses the vanilla Dragonborn werebear paths, so if your werebear mods are installed they're already here.
+
+This folder: werebear head, eyes and teeth meshes (.nif/.tri) from your werebear mod, if it has them.

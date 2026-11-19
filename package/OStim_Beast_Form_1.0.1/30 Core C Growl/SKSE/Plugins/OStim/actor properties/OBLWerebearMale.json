@@ -1,0 +1,16 @@
+{
+	"condition": {
+		"info": "OBL_WerebearMaleCondition (own Werebear type for future packs)",
+		"mod": "OStim_Beast_Form_Merged.esp",
+		"formid": "0x83C"
+	},
+	"type": "Werebear",
+	"requirements": {
+		"penis": true,
+		"testicles": true,
+		"anus": true,
+		"mouth": true,
+		"hand": true,
+		"foot": true
+	}
+}

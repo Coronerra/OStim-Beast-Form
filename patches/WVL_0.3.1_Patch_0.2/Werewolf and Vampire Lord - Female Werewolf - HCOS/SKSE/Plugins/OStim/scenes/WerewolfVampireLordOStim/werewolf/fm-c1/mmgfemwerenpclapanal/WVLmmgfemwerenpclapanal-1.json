@@ -1,0 +1,64 @@
+{
+    "name": "HCoS (Female Werewolf) Anal FemWolfDom 1",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLFWWWerewolfHubFMC1",
+            "description": "HCoS (Female Werewolf) Anal FemWolfDom",
+            "icon": "WVLIcons/werewolf/FemWWOnTopMaleHuman"
+        },
+        {
+            "destination": "WVLmmgfemwerenpclapanal-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLFWWWerewolfHubFMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_mmgfemwerenpclapanal_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "female"
+        },
+        {
+            "intendedSex": "male",
+            "tags": [
+                "lyingback",
+                "onbottom"
+            ],
+            "feetOnGround": false,
+            "sosBend": 2
+        }
+    ],
+    "actions": [
+        {
+            "type": "analsex",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "hcos",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "cowgirl",
+        "femdom",
+        "anal",
+        "dom",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal"
+    ]
+}

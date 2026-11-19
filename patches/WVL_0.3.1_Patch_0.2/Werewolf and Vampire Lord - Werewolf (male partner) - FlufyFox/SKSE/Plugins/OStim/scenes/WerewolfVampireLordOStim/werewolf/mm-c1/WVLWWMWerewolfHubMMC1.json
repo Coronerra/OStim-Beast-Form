@@ -1,0 +1,50 @@
+{
+    "name": "Werewolf (male partner) Pack MM",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 2,
+    "navigations": [
+        {
+            "origin": "WVLIdleWWMWerewolfMMC1",
+            "description": "Werewolf (male partner) Pack",
+            "icon": "WVLIcons/werewolf/MaleWerewolfHub",
+            "priority": -100
+        },
+        {
+            "destination": "WVLIdleWWMWerewolfMMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return",
+            "priority": -1000
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_Flufywwfootjob_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "tags": [
+                "standing"
+            ]
+        },
+        {
+            "intendedSex": "male",
+            "tags": [
+                "standing"
+            ]
+        }
+    ],
+    "tags": [
+        "idle",
+        "intro",
+        "creature",
+        "werewolf",
+        "packwerewolfmalepartner"
+    ],
+    "noRandomSelection": true
+}

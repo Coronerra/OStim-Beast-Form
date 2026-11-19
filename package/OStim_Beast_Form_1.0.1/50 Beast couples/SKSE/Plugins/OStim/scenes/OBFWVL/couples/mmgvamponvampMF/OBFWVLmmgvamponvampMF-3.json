@@ -1,0 +1,60 @@
+{
+    "name": "HCoS Vampire on Vampire 3 [male-first order]",
+    "modpack": "OBeastLite",
+    "length": 6,
+    "navigations": [
+        {
+            "destination": "OBFWVLmmgvamponvampMF-4",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "OBFWVLCCVLHubMF",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_mmgvamponvamp_S3"
+        }
+    ],
+    "actors": [
+        {
+            "type": "VampireLord",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "VampireLord",
+            "intendedSex": "female",
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "hcos",
+        "creature",
+        "cc",
+        "samerace",
+        "vampirelord",
+        "missionary",
+        "loving",
+        "romantic",
+        "packbeastcouples",
+        "converted",
+        "slal",
+        "vaginal",
+        "obfmalefirst"
+    ]
+}

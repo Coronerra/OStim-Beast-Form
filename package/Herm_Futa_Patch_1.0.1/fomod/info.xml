@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+	<Name>Beast Form Herm Patch</Name>
+	<Author>That Guy (Coronerra)</Author>
+	<Version>1.0.1</Version>
+	<Description>Optional herm / urta (Fruta) patch for OStim Beast Form 1.0, for TWO Extras users. Credit: That Guy (Coronerra).</Description>
+	<Website>https://github.com/Coronerra/OStim-Beast-Form-Merged</Website>
+	<Groups><element>Creatures</element></Groups>
+</fomod>

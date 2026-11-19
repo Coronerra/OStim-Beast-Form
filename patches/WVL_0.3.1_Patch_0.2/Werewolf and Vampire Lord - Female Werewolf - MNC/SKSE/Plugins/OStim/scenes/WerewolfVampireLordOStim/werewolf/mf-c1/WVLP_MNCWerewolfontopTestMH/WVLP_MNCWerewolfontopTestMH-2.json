@@ -1,0 +1,62 @@
+{
+    "name": "MNC (Female Werewolf) Cowgirl 2 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "destination": "WVLP_MNCWerewolfontopTestMH-3",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLP_FWWWerewolfHubMH",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfontopTest_S2"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "lyingback",
+                "onbottom"
+            ],
+            "feetOnGround": false,
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "cowgirl",
+        "femdom",
+        "vaginal",
+        "dom",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "malefirst"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "name": "MNC (Female Werewolf) Doggystyle 1",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLFWWWerewolfHubFMC1",
+            "description": "MNC (Female Werewolf) Doggystyle",
+            "icon": "WVLIcons/werewolf/FemWWFromBehindByMaleHuman"
+        },
+        {
+            "destination": "WVLMNCWerewolfBehindTest-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLFWWWerewolfHubFMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfBehindTest_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "female"
+        },
+        {
+            "intendedSex": "male",
+            "tags": [
+                "kneeling"
+            ],
+            "feetOnGround": false
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "doggystyle",
+        "holding",
+        "vaginal",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal"
+    ]
+}

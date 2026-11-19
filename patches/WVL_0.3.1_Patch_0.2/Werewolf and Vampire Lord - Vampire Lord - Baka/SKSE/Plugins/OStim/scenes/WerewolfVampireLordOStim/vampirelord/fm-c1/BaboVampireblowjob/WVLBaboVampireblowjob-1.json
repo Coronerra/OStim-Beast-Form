@@ -1,0 +1,68 @@
+{
+    "name": "BaboVampire Blowjob 1",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLVLVampireLordHubFMC1",
+            "description": "BaboVampire Blowjob",
+            "icon": "WVLIcons/vampirelord/FemHumanGivingHeadMaleVL"
+        },
+        {
+            "destination": "WVLBaboVampireblowjob-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLVLVampireLordHubFMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_BaboVampireblowjob_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "VampireLord",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ]
+        },
+        {
+            "intendedSex": "female",
+            "tags": [
+                "lyingback",
+                "spreadlegs"
+            ],
+            "feetOnGround": false
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "babo",
+        "creature",
+        "vampirelord",
+        "bestiality",
+        "cf",
+        "missionary",
+        "blowjob",
+        "dirty",
+        "movingdick",
+        "oral",
+        "baka",
+        "packvampirelord",
+        "converted",
+        "slal"
+    ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+	<Name>OStim Beast Form</Name>
+	<Author>That Guy (Coronerra)</Author>
+	<Version>1.0.1</Version>
+	<Description>Play as a werewolf, werebear or Vampire Lord in OStim with your mind intact. One installer, three setups: vanilla, TWO 4.1 or Growl. Credit: That Guy (Coronerra). Source: https://github.com/Coronerra/OStim-Beast-Form-Merged</Description>
+	<Website>https://github.com/Coronerra/OStim-Beast-Form-Merged</Website>
+	<Groups><element>Creatures</element></Groups>
+</fomod>

@@ -1,0 +1,46 @@
+{
+	"name": "OBFWerewolfIdleCCMF",
+	"modpack": "OBeastLite",
+	"length": 2,
+	"navigations": [
+		{
+			"destination": "OBFWVLCCHubMF",
+			"description": "Beast Couples Pack (Beast Form)",
+			"icon": "OCreatures/werewolf/werewolf"
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgwerewolvesblowjob_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "Werewolf",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"animationIndex": 1,
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"type": "Werewolf",
+			"intendedSex": "female",
+			"animationIndex": 0,
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"werewolf",
+		"hub",
+		"obfunlock"
+	]
+}

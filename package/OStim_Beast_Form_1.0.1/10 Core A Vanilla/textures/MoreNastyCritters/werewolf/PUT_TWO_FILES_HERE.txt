@@ -1,0 +1,9 @@
+PUT_TWO_FILES_HERE
+OStim Beast Form 1.0 - That Guy (Coronerra)
+
+Not included: these are Frosferes' TWO - Total Werewolf Overhaul 4.1 files, which I didn't change.
+Frosferes is okay with patches but I will not repackage any files he made that I did not have to patch.
+Get TWO 4.1: https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/
+Copy these files from TWO's "Core" folder into THIS folder (same names). You don't need TWO's plugin (Werewolves.esp) for this.
+
+This folder (textures\MoreNastyCritters\werewolf\): werewolfballs.dds, werewolfballs_n.dds, werewolfballs_sk.dds, werewolfpenis_red.dds, werewolfpenis_n.dds, werewolfpenis_sk.dds (cock textures used by the included cock).

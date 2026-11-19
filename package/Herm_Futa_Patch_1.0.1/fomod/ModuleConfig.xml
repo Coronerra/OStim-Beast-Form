@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>Beast Form Herm Patch 1.0.1</moduleName>
+  <installSteps order="Explicit">
+    <installStep name="Herm patch">
+      <optionalFileGroups order="Explicit">
+        <group name="Read before installing" type="SelectAll">
+          <plugins order="Explicit">
+            <plugin name="I use TWO Extras' herm / urta werewolf">
+              <description>Needs TWO Extras (WerewolvesExtras.esp), and WerewolvesExtrasGrowl.esp if you use Growl. Works with the main file's TWO core, or the Growl core with "Growl + TWO 4.1". Not with the vanilla core.
+I am not going to test this myself. If you use TWO's herm or urta werewolf, please test it and report any problems in the support section of the OStim Beast Form page.</description>
+              <conditionFlags>
+                <flag name="herm">on</flag>
+              </conditionFlags>
+              <typeDescriptor>
+                <type name="Required"/>
+              </typeDescriptor>
+            </plugin>
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+  <conditionalFileInstalls>
+    <patterns>
+      <pattern>
+        <dependencies operator="And">
+          <flagDependency flag="herm" value="on"/>
+        </dependencies>
+        <files>
+          <folder source="10 Herm" destination="" priority="0"/>
+        </files>
+      </pattern>
+    </patterns>
+  </conditionalFileInstalls>
+</config>

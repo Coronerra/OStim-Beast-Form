@@ -1,0 +1,61 @@
+{
+    "name": "MNC (Female Werewolf) Gives BlowJob 1 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLP_FWWWerewolfHubMH",
+            "description": "MNC (Female Werewolf) Gives BlowJob",
+            "icon": "OCreatures/werewolf/werewolforal"
+        },
+        {
+            "destination": "WVLP_MNCWerewolfBlowjobTestMH-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLP_FWWWerewolfHubMH",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfBlowjobTest_S1"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "blowjob",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "holding",
+        "oral",
+        "blowjob",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "malefirst"
+    ]
+}

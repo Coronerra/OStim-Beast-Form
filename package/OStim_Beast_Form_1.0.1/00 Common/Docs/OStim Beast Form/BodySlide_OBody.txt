@@ -1,0 +1,20 @@
+OStim Beast Form 1.0: BodySlide and OBody (werewolves only)
+by That Guy (Coronerra)
+
+There is no werebear BodySlide anywhere, so this is about werewolves.
+
+BODYSLIDE
+- TWO ships its own BodySlide projects ("TWO Female Body", "TWO Male
+  Body"). Build them into a separate output mod placed BELOW TWO in MO2's
+  left pane.
+- This mod's converted female werewolf body is not part of TWO's project,
+  so a BodySlide build doesn't change it. It keeps TWO's morph names, so
+  in-game morphs still work on it.
+- The male body is TWO's own, so your BodySlide build applies to males.
+
+OBODY
+- The O menu opens on werewolves, but human presets do nothing on them.
+- OBody keeps ONE preset per actor. Picking a werewolf preset on someone
+  replaces their human preset, and the human one comes back only if you
+  pick it again.
+- OBody lists TWO's werewolf presets as female presets.

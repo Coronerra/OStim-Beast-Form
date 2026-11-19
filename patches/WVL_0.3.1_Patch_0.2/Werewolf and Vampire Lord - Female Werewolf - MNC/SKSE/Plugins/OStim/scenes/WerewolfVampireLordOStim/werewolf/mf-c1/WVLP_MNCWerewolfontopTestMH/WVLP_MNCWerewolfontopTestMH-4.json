@@ -1,0 +1,57 @@
+{
+    "name": "MNC (Female Werewolf) Cowgirl 4 [male-first order]",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 15,
+    "speeds": [
+        {
+            "animation": "WVL_MNCWerewolfontopTest_S4"
+        }
+    ],
+    "actors": [
+        {
+            "intendedSex": "male",
+            "tags": [
+                "lyingback",
+                "onbottom",
+                "climaxing"
+            ],
+            "feetOnGround": false,
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "mnc",
+        "dayelyte",
+        "bestiality",
+        "femwerewolf",
+        "werewolf",
+        "cowgirl",
+        "femdom",
+        "vaginal",
+        "dom",
+        "creature",
+        "packfemalewerewolf",
+        "converted",
+        "slal",
+        "transition",
+        "malefirst"
+    ],
+    "noRandomSelection": true,
+    "destination": "WVLMNCWerewolfontopTest-3"
+}

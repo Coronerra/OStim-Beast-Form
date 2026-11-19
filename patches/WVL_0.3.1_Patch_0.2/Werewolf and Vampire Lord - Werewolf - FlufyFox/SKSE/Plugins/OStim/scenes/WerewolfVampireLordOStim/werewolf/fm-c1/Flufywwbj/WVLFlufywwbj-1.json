@@ -1,0 +1,63 @@
+{
+    "name": "FlufyFox Werewolf Blowjob 1",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "WVLWWWerewolfHubFMC1",
+            "description": "FlufyFox Werewolf Blowjob",
+            "icon": "WVLIcons/werewolf/FemHumanBlowjobMaleWW"
+        },
+        {
+            "destination": "WVLFlufywwbj-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "WVLWWWerewolfHubFMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_Flufywwbj_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ]
+        },
+        {
+            "intendedSex": "female"
+        }
+    ],
+    "actions": [
+        {
+            "type": "cuddling",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "flufyfox",
+        "creature",
+        "bestiality",
+        "werewolf",
+        "abc",
+        "cf",
+        "blowjob",
+        "oral",
+        "cute",
+        "love",
+        "romantic",
+        "packwerewolf",
+        "converted",
+        "slal"
+    ]
+}

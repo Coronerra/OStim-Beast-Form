@@ -1,0 +1,54 @@
+{
+	"name": "OBFWVLCCVLHubMF",
+	"modpack": "OBeastLite",
+	"length": 2,
+	"navigations": [
+		{
+			"origin": "OBFVampireLordIdleCCMF",
+			"description": "Beast Couples Pack (Beast Form)",
+			"icon": "OCreatures/vampirelord/vampirelord",
+			"priority": -100
+		},
+		{
+			"destination": "OBFVampireLordIdleCCMF",
+			"description": "Return",
+			"icon": "OStim/symbols/return",
+			"priority": -1000
+		}
+	],
+	"speeds": [
+		{
+			"animation": "WVL_mmgvamponvamp_S1"
+		}
+	],
+	"actors": [
+		{
+			"type": "VampireLord",
+			"intendedSex": "male",
+			"requirements": [
+				"penis"
+			],
+			"animationIndex": 1,
+			"tags": [
+				"standing"
+			]
+		},
+		{
+			"type": "VampireLord",
+			"intendedSex": "female",
+			"animationIndex": 0,
+			"tags": [
+				"standing"
+			]
+		}
+	],
+	"tags": [
+		"idle",
+		"intro",
+		"creature",
+		"vampirelord",
+		"packbeastcouples",
+		"obfunlock"
+	],
+	"noRandomSelection": true
+}

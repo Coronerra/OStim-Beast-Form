@@ -1,0 +1,50 @@
+{
+    "name": "Vampire Lord (male partner) Pack MM",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 2,
+    "navigations": [
+        {
+            "origin": "WVLIdleVLMVampireLordMMC1",
+            "description": "Vampire Lord (male partner) Pack",
+            "icon": "WVLIcons/vampirelord/MaleVampireLordHub",
+            "priority": -100
+        },
+        {
+            "destination": "WVLIdleVLMVampireLordMMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return",
+            "priority": -1000
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_Anubsvlstanding_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "VampireLord",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "tags": [
+                "standing"
+            ]
+        },
+        {
+            "intendedSex": "male",
+            "tags": [
+                "standing"
+            ]
+        }
+    ],
+    "tags": [
+        "idle",
+        "intro",
+        "creature",
+        "vampirelord",
+        "packvampirelordmalepartner"
+    ],
+    "noRandomSelection": true
+}

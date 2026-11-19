@@ -1,0 +1,20 @@
+{
+	"condition": {
+		"info": "OBFHerm_WerewolfHermCondition",
+		"mod": "OStim_Beast_Form_TWO_Herm_Patch.esp",
+		"formid": "0x803"
+	},
+	"type": "Werewolf",
+	"sex": "male",
+	"requirements": {
+		"penis": true,
+		"testicles": true,
+		"vagina": true,
+		"breast": true,
+		"nipple": true,
+		"anus": true,
+		"mouth": true,
+		"hand": true,
+		"foot": true
+	}
+}

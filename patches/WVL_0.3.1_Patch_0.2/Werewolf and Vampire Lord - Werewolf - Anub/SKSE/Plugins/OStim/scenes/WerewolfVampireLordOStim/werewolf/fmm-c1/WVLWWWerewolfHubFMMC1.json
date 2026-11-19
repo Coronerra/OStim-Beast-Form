@@ -1,0 +1,56 @@
+{
+    "name": "Werewolf Pack FMM",
+    "modpack": "WerewolfVampireLordOStim",
+    "length": 2,
+    "navigations": [
+        {
+            "origin": "WVLIdleWWWerewolfFMMC1",
+            "description": "Werewolf Pack",
+            "icon": "WVLIcons/werewolf/MaleWerewolfHub",
+            "priority": -100
+        },
+        {
+            "destination": "WVLIdleWWWerewolfFMMC1",
+            "description": "Return",
+            "icon": "OStim/symbols/return",
+            "priority": -1000
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_AnubsFMW_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "tags": [
+                "standing"
+            ]
+        },
+        {
+            "intendedSex": "female",
+            "tags": [
+                "standing"
+            ]
+        },
+        {
+            "intendedSex": "male",
+            "tags": [
+                "standing"
+            ]
+        }
+    ],
+    "tags": [
+        "idle",
+        "intro",
+        "creature",
+        "werewolf",
+        "packwerewolf"
+    ],
+    "noRandomSelection": true
+}
