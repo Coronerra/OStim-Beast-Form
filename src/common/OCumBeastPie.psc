@@ -71,6 +71,14 @@ float Function PieSeconds()
 	return 60.0
 EndFunction
 
+float Function HoldSeconds()
+	return 1800.0 ; 1.0.4: overall cap for holding the pie through a beast form (30 min script time)
+EndFunction
+
+int Function HoldUnloadChecks()
+	return 20 ; 1.0.4: 20 checks x 3 s = 60 s with the partner's 3D unloaded
+EndFunction
+
 ; ======================= 1) Beast Pie (unchanged from 0.1) =======================
 
 Event OnPie(string eventName, string strArg, float numArg, Form sender)
@@ -101,9 +109,27 @@ Event OnPie(string eventName, string strArg, float numArg, Form sender)
 
 	OBF_Log.Line("OCumBeastPie", "kind " + kind + ": " + act.GetDisplayName() + " is in beast form, holding the pie")
 
+	; 1.0.4: the hold has exits. Stamp/dead/deleted as before, plus: 3D unloaded for ~60 s (partner left in
+	; another cell), or an overall cap, so this event can never wait forever.
+	float held = 0.0
+	int unloaded = 0
 	while IsBeast(act) || !act.Is3DLoaded()
 		Utility.Wait(3.0)
+		held += 3.0
 		if StorageUtil.GetIntValue(act, key, 0) != stamp || act.IsDead() || act.IsDeleted()
+			return
+		endif
+		if act.Is3DLoaded()
+			unloaded = 0
+		else
+			unloaded += 1
+			if unloaded >= HoldUnloadChecks()
+				OBF_Log.Line("OCumBeastPie", "kind " + kind + ": " + act.GetDisplayName() + " stayed unloaded for " + (unloaded * 3) + " s, pie hold given up")
+				return
+			endif
+		endif
+		if held >= HoldSeconds()
+			OBF_Log.Line("OCumBeastPie", "kind " + kind + ": " + act.GetDisplayName() + " still in beast form after " + held + " s, pie hold given up")
 			return
 		endif
 	endwhile
@@ -134,6 +160,11 @@ Event OnBeastOrgasm(string eventName, string strArg, float numArg, Form sender)
 	endif
 	if !BeastLoadEnabled || !OCumMale || !OCumMain
 		OBF_Log.Line("OBF BeastLoad", OBF_Log.Who(orgasmer) + " climax: no load (Beast Load off in the MCM, or OCum not found)")
+		return
+	endif
+	if !OBF_Detect.Ours("load")
+		; 1.1.0: another system owns the beast climax load (OCreatures Reforged or a claim) - no double marks
+		OBF_Log.Line("OBF BeastLoad", OBF_Log.Who(orgasmer) + " climax: Beast Load stands down (" + OBF_Detect.OwnerText("load") + ")")
 		return
 	endif
 

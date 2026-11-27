@@ -1,0 +1,69 @@
+{
+    "name": "HCoS Werewolves Blowjob 1 [male-first order]",
+    "modpack": "OBeastLite",
+    "length": 6,
+    "navigations": [
+        {
+            "origin": "OBFWVLCCHubMF",
+            "description": "HCoS Werewolves Blowjob [male-first order]",
+            "icon": "OBeastForm/werewolf/MaleWerewolfHub"
+        },
+        {
+            "destination": "OBFWVLmmgwerewolvesblowjobMF-2",
+            "description": "Next",
+            "icon": "OStim/symbols/next"
+        },
+        {
+            "destination": "OBFWVLCCHubMF",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_mmgwerewolvesblowjob_S1"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "blowjob",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "hcos",
+        "creature",
+        "cc",
+        "samerace",
+        "a1",
+        "a2",
+        "werewolf",
+        "standing",
+        "loving",
+        "romantic",
+        "packbeastcouples",
+        "converted",
+        "slal",
+        "blowjob",
+        "oral",
+        "femwerewolf",
+        "obfmalefirst"
+    ]
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  OStim Beast Form 1.1.0: reference breast-chain configuration. INERT: it lives under Docs, not under SKSE\Plugins.
+  By That Guy (Coronerra). Our own values for the standard community bone names; the structure follows the common FSMP / HDT-SMP
+  format. NOT loaded or tuned in game: treat it as a starting point. Copy it into your own body mod, rename it, point your nif's
+  extra data at your copy, then tune. Only the left chain is written out; mirror it for the right side
+  (NPC R Breast, NPC R Breast01 ...). Add the P1 chain bones (Breast00 to Breast04 P1) the same way if your body uses them.
+-->
+<system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<bone-default>
+		<mass>1.0</mass>
+		<inertia x="1" y="1" z="1"/>
+		<centerOfMassTransform>
+			<rotation x="0" y="0" z="0" w="1"/>
+			<translation x="0" y="0" z="0"/>
+		</centerOfMassTransform>
+		<linearDamping>0.4</linearDamping>
+		<angularDamping>0.4</angularDamping>
+		<friction>0.5</friction>
+		<rollingFriction>0.0</rollingFriction>
+		<restitution>0.0</restitution>
+		<margin-multiplier>1.0</margin-multiplier>
+		<shape>sphere</shape>
+		<gravity-factor>1.0</gravity-factor>
+	</bone-default>
+
+	<generic-constraint-default>
+		<frameInB>
+			<rotation x="0" y="0" z="0" w="1"/>
+			<translation x="0" y="0" z="0"/>
+		</frameInB>
+		<useLinearReferenceFrameA>true</useLinearReferenceFrameA>
+		<linearLowerLimit x="-0.5" y="-0.5" z="-0.5"/>
+		<linearUpperLimit x="0.5" y="0.5" z="0.5"/>
+		<angularLowerLimit x="-0.1" y="-0.1" z="-0.1"/>
+		<angularUpperLimit x="0.1" y="0.1" z="0.1"/>
+		<linearStiffness x="40" y="40" z="40"/>
+		<angularStiffness x="40" y="40" z="40"/>
+		<linearDamping x="2" y="2" z="2"/>
+		<angularDamping x="2" y="2" z="2"/>
+		<linearEquilibrium x="0" y="0" z="0"/>
+		<angularEquilibrium x="0" y="0" z="0"/>
+		<linearBounce x="0" y="0" z="0"/>
+		<angularBounce x="0" y="0" z="0"/>
+	</generic-constraint-default>
+
+	<!-- left breast chain: the root follows the skeleton (mass 0), the next bone swings -->
+	<bone name="NPC L Breast" template="">
+		<mass>0</mass>
+	</bone>
+	<bone name="NPC L Breast01" template="">
+		<mass>1.0</mass>
+	</bone>
+	<generic-constraint bodyA="NPC L Breast" bodyB="NPC L Breast01" template=""/>
+</system>

@@ -94,7 +94,11 @@ Event OnThreadStart(string EventName, string StrArg, float ThreadID, Form Sender
 	int i = 0
 	while i < acts.Length
 		Actor a = acts[i]
-		if a && a.GetActorBase().GetSex() == 0
+		ActorBase ab = None
+		if a
+			ab = a.GetLeveledActorBase() ; 1.0.4: leveled NPCs report the right sex
+		endif
+		if ab && ab.GetSex() == 0
 			Race r = a.GetRace()
 			if r == WerewolfBeastRace && HaveWerewolfMesh
 				EquipAddon(a, OBL_WerewolfAddon)

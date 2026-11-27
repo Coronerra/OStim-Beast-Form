@@ -10,7 +10,13 @@ bool Property DebugMessages = false Auto
 
 int Property CurrentForm = 0 Auto Hidden     ; 0 none, 1 werewolf, 2 vampire lord, 3 werebear/other
 Race WerewolfRace
+Race WerebearRace        ; 1.0.4: DLC2WerebearBeastRace (Dragonborn.esm 0x1E17B), Growl uses it too
 Race VampireLordRace
+Keyword ActorTypeNPC     ; 1.0.4: human-looking races (also Growl's HRI_Alternate_Race_* "Lycanthrope" alts) are never beast forms
+Keyword ActorTypeCreature
+Keyword OcrWerewolfKw    ; 1.0.4: OCreatures Reforged race keywords (optional)
+Keyword OcrVampireKw
+Keyword GrowlWerecreatureKw ; 1.0.4: Growl's HRI_Lycan_Keyword_IsWerecreature (optional, looked up by editor ID)
 float RefreshInterval = 30.0
 
 Event OnInit()
@@ -19,29 +25,118 @@ EndEvent
 
 Function Maintenance()
 	WerewolfRace = Game.GetFormFromFile(0x000CDD84, "Skyrim.esm") as Race
+	WerebearRace = Game.GetFormFromFile(0x0001E17B, "Dragonborn.esm") as Race
 	VampireLordRace = Game.GetFormFromFile(0x0000283A, "Dawnguard.esm") as Race
+	ActorTypeNPC = Game.GetFormFromFile(0x00013794, "Skyrim.esm") as Keyword
+	ActorTypeCreature = Game.GetFormFromFile(0x00013795, "Skyrim.esm") as Keyword
+	OcrWerewolfKw = None
+	OcrVampireKw = None
+	if OBF_Log.Loaded("OCreatures.esp")
+		OcrWerewolfKw = Game.GetFormFromFile(0x00005C58, "OCreatures.esp") as Keyword
+		OcrVampireKw = Game.GetFormFromFile(0x00005C57, "OCreatures.esp") as Keyword
+	endif
+	GrowlWerecreatureKw = None
+	if OBF_Log.Loaded("Growl - Werebeasts of Skyrim.esp")
+		GrowlWerecreatureKw = Keyword.GetKeyword("HRI_Lycan_Keyword_IsWerecreature")
+	endif
 	CheckForm(true)
-	OBF_Log.Line("BeastAware", "setup: on " + OBF_Log.YesNo(ModEnabled) + " | SkyrimNet " + OBF_Log.YesNo(OBF_Log.Loaded("SkyrimNet.esp")) + " | announce shift " + OBF_Log.YesNo(AnnounceShift) + " / revert " + OBF_Log.YesNo(AnnounceRevert) + " | NPCs react " + OBF_Log.YesNo(NpcsReact) + " | state note " + OBF_Log.YesNo(StateContext) + " | player form now " + CurrentForm + " (" + Game.GetPlayer().GetRace().GetName() + ")")
+	OBF_Log.Line("BeastAware", "setup: on " + OBF_Log.YesNo(ModEnabled) + " | SkyrimNet " + OBF_Log.YesNo(SkyrimNetReady()) + " | announce shift " + OBF_Log.YesNo(AnnounceShift) + " / revert " + OBF_Log.YesNo(AnnounceRevert) + " | NPCs react " + OBF_Log.YesNo(NpcsReact) + " | state note " + OBF_Log.YesNo(StateContext) + " | player form now " + CurrentForm + " (" + PlayerRaceName() + ")")
 EndFunction
 
-int Function DetectForm()
+; ---- 1.0.4: SkyrimNet gate. Nothing below calls SkyrimNetApi unless this is true. ----
+bool Function SkyrimNetReady()
+	return OBF_Log.Loaded("SkyrimNet.esp")
+EndFunction
+
+; the 30 s state refresh runs only while it has something to do
+bool Function RefreshWanted()
+	; 1.1.0: when OCreatures Reforged (or another mod) owns the "prompt" duty, no state note is pushed (an empty state)
+	return ModEnabled && StateContext && CurrentForm > 0 && SkyrimNetReady() && OBF_Detect.Ours("prompt")
+EndFunction
+
+; ---- 1.1.0: extra state for the note: size label, arousal band, climaxes in this form ----
+string Function ArousalBand()
 	Actor p = Game.GetPlayer()
-	Race r = p.GetRace()
+	if !OActor.IsInOStim(p)
+		return "calm"
+	endif
+	float x = OActor.GetExcitement(p)
+	int t1 = 25
+	int t2 = 60
+	int t3 = 90
+	if OBF_Log.HasPapyrusUtil() && JsonUtil.JsonExists("OStimBeastForm/arousal")
+		t1 = JsonUtil.GetIntValue("OStimBeastForm/arousal", "low", t1)
+		t2 = JsonUtil.GetIntValue("OStimBeastForm/arousal", "mid", t2)
+		t3 = JsonUtil.GetIntValue("OStimBeastForm/arousal", "high", t3)
+	endif
+	if x < t1 as float
+		return "low"
+	elseif x < t2 as float
+		return "rising"
+	elseif x < t3 as float
+		return "high"
+	endif
+	return "near the peak"
+EndFunction
+
+string Function StateExtras()
+	string s = ""
+	if OBF_Log.HasPapyrusUtil()
+		string sz = StorageUtil.GetStringValue(None, "OBF_PlayerSizeLabel", "")
+		if sz != ""
+			s += " Size: " + sz + "."
+		endif
+	endif
+	s += " Arousal: " + ArousalBand() + "."
+	if OBF_Log.HasPapyrusUtil()
+		int n = StorageUtil.GetIntValue(None, "OBF_MatingCount", 0)
+		if n > 0
+			s += " Climaxes in this form so far: " + n + "."
+		endif
+	endif
+	return s
+EndFunction
+
+string Function PlayerRaceName()
+	Race r = Game.GetPlayer().GetRace()
+	if r
+		return r.GetName()
+	endif
+	return "no race"
+EndFunction
+
+; 1.0.4: by race form and keyword, never by (translated) display name. Human-looking lycanthrope alt races
+; (Growl HRI_Alternate_Race_*) carry ActorTypeNPC and are always 0.
+int Function FormOfRace(Race r)
+	if !r
+		return 0
+	endif
 	if WerewolfRace && r == WerewolfRace
 		return 1
+	elseif WerebearRace && r == WerebearRace
+		return 3
 	elseif VampireLordRace && r == VampireLordRace
 		return 2
 	endif
-	; catch-all for overhaul races (werebears etc.) by name
-	string n = r.GetName()
-	if StringUtil.Find(n, "Werewolf") >= 0
-		return 1
-	elseif StringUtil.Find(n, "Werebear") >= 0
-		return 3
-	elseif StringUtil.Find(n, "Vampire Lord") >= 0
+	; other beast-form races (overhaul mods): must be creature-type and not NPC-type
+	if !ActorTypeCreature || !r.HasKeyword(ActorTypeCreature)
+		return 0
+	endif
+	if ActorTypeNPC && r.HasKeyword(ActorTypeNPC)
+		return 0
+	endif
+	if OcrVampireKw && r.HasKeyword(OcrVampireKw)
 		return 2
+	elseif OcrWerewolfKw && r.HasKeyword(OcrWerewolfKw)
+		return 1
+	elseif GrowlWerecreatureKw && r.HasKeyword(GrowlWerecreatureKw)
+		return 1
 	endif
 	return 0
+EndFunction
+
+int Function DetectForm()
+	return FormOfRace(Game.GetPlayer().GetRace())
 EndFunction
 
 string Function BeastDesc(int f)
@@ -106,7 +201,7 @@ Function CheckForm(bool onLoad)
 	int old = CurrentForm
 	CurrentForm = f
 	if f == old
-		if f > 0 && StateContext
+		if RefreshWanted()
 			PushState()
 			RegisterForSingleUpdate(RefreshInterval)
 		endif
@@ -122,12 +217,15 @@ Function CheckForm(bool onLoad)
 		if AnnounceShift && !onLoad
 			Send(ShiftText(f, nm))
 		endif
-		if StateContext
+		if RefreshWanted()
 			PushState()
 			RegisterForSingleUpdate(RefreshInterval)
 		endif
-		Dbg("shift detected: form " + f + " (" + FormName(f) + ", race " + p.GetRace().GetName() + ")")
+		Dbg("shift detected: form " + f + " (" + FormName(f) + ", race " + PlayerRaceName() + ")")
 	elseif f == 0 && old > 0
+		if OBF_Log.HasPapyrusUtil()
+			StorageUtil.SetIntValue(None, "OBF_MatingCount", 0)   ; 1.1.0: the count is per form session
+		endif
 		if AnnounceRevert && !onLoad
 			Send(RevertText(old, nm))
 		endif
@@ -143,6 +241,9 @@ Function CheckForm(bool onLoad)
 EndFunction
 
 Function Send(string content)
+	if !ModEnabled || !SkyrimNetReady()
+		return ; 1.0.4: no SkyrimNetApi call without SkyrimNet
+	endif
 	Actor p = Game.GetPlayer()
 	int rc
 	if NpcsReact
@@ -154,11 +255,11 @@ Function Send(string content)
 EndFunction
 
 Function PushState()
-	if !ModEnabled || CurrentForm == 0
-		return
+	if !RefreshWanted()
+		return ; 1.0.4: off, no state note wanted, not in beast form, or SkyrimNet missing: no API call
 	endif
 	Actor p = Game.GetPlayer()
-	string d = StateText(CurrentForm, p.GetDisplayName())
+	string d = StateText(CurrentForm, p.GetDisplayName()) + StateExtras()
 	SkyrimNetApi.RegisterShortLivedEvent("beastaware_player_form", "beastaware_form", d, "", 45000, p, None)
 EndFunction
 

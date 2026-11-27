@@ -1,0 +1,10 @@
+PUT_MFA_FILES_HERE
+OStim Beast Form 1.0 (Growl core) - That Guy (Coronerra)
+
+Not included because I didn't change these files. If Monster Facial Animation (MFA) is installed, they're already here and you can ignore this note.
+This folder (meshes\actors\werewolfbeast\character assets\), from Monster Facial Animation:
+  werewolfhead.nif                                 (head, used for male and female werewolves)
+  werewolfteeth.nif, werewolfteeth.tri             (mouth)
+  eyesmalewerewolfbeast.nif, eyesmalewerewolfbeast.tri  (eyes)
+The head expression file (werewolfhead.tri with BFA brow morphs, edited by me) IS included, in coronerra\bfa\.
+With "Growl + TWO" picked in the installer, TWO's own heads are used instead and you can ignore this note.

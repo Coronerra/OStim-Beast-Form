@@ -1,0 +1,6 @@
+PUT_WEREBEAR_FILES_HERE
+OStim Beast Form 1.0 (Growl core) - That Guy (Coronerra)
+
+Not included because I didn't change these files. Growl uses the vanilla Dragonborn werebear paths, so if your werebear mods are installed they're already here.
+
+This folder: werebearHard.nif = the aroused werebear body (More Nasty Critters / OCreatures Reforged). Without OCreatures Reforged, this mod puts it on male werebears during scenes if the file is here.

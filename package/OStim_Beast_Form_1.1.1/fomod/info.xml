@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+	<Name>OStim Beast Form</Name>
+	<Author>That Guy (Coronerra)</Author>
+	<Version>1.1.1</Version>
+	<Description>FINAL RELEASE (1.1.1): left with the community; anyone may modify, reupload, fork or build on it, keeping the existing permission credits. An enabling framework for werewolves, werebears and Vampire Lords in OStim. It ships no bodies and no sex animations, and anyone can make them for it. Start scenes in beast form, keep your beast form from running out mid-scene, work with vanilla, Growl and TWO. One installer: pick your setup, tick the extras you want. Credit: That Guy (Coronerra). Source: https://github.com/Coronerra/OStim-Beast-Form</Description>
+	<Website>https://github.com/Coronerra/OStim-Beast-Form</Website>
+	<Groups><element>Creatures</element></Groups>
+</fomod>

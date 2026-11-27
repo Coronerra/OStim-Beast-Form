@@ -1,0 +1,12 @@
+{
+  "stringList": {
+    "werewolf_plugins": [],
+    "werebear_plugins": [],
+    "vampirelord_plugins": []
+  },
+  "intList": {
+    "werewolf_ids": [],
+    "werebear_ids": [],
+    "vampirelord_ids": []
+  }
+}

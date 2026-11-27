@@ -1,0 +1,8 @@
+PUT_WEREBEAR_FILES_HERE
+OStim Beast Form 1.1.0 (Growl core) - That Guy (Coronerra)
+
+Not included because I didn't change these files. Growl ships no werebear meshes: it uses the vanilla Dragonborn werebear paths (meshes\actors\dlc02\werebear\...) and only puts the werewolf skeleton and behavior on the werebear race. Any werebear mod that writes to these paths is picked up as is, and a loose file placed here overwrites what vanilla loads.
+
+This folder (meshes\actors\dlc02\werebear\body\): werebear.nif (male body), werebear_female.nif (female body). Beast Form is a framework that ships no bodies: take them from a body set built on it (for example the Riotguard body pack, a separate download; it is the first such set, not the only one and not required; install it below Growl, TWO and Monster Lipsync in MO2), or from your werebear body mod (for example Monster Lipsync SE - Vanilla), or vanilla.
+
+This is the exploration form. The aroused body used during scenes lives elsewhere: meshes\MoreNastyCritters\werebear\werebearHard.nif (the shared More Nasty Critters path). A body set can supply it; this mod ships no werebear mesh.

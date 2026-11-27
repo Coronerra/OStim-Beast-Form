@@ -1,0 +1,19 @@
+PUT_TWO_FILES_HERE
+OStim Beast Form 1.1.0 - That Guy (Coronerra)
+
+This mod ships NO body meshes. It is a framework that uses the stock vanilla paths, so any body set can be installed on top.
+Werewolf bodies go in THIS folder (meshes\actors\werewolfbeast\character assets\), with the stock file names vanilla, Growl and TWO use.
+Get them from ONE of these:
+
+1. A body set for this framework, for example the Riotguard body pack (a separate download; the first set built on this framework,
+   not the only one and not required). It installs femalebodywerewolf_0/_1.nif, malebodywerewolf_0/_1.nif (+ .tri) and the cock at
+   CreatureFramework\CanineRedHard.nif here. In MO2 it must win over Growl, TWO and Monster Lipsync (install it below them).
+2. Without one: Frosferes' TWO - Total Werewolf Overhaul 4.1 files (not repackaged here).
+   Get TWO 4.1: https://www.loverslab.com/topic/159911-two-total-werewolf-overhaul/
+   Copy from TWO's "Core" folder into THIS folder (same names). You don't need TWO's plugin (Werewolves.esp).
+     malebodywerewolf_0.nif, malebodywerewolf_1.nif, malebodywerewolf.tri       (male body, headless)
+     femalebodywerewolf_0.nif, femalebodywerewolf_1.nif, femalebodywerewolf.tri (female body)
+     CreatureFramework\CanineRedHard.nif, CreatureFramework\AddonEmpty.nif      (TWO cock standard)
+     skeleton.nif                                                               (TWO's werewolf skeleton)
+
+Anyone is free to make a body set for these paths. See Docs\OStim Beast Form\Extension_Guide.txt.

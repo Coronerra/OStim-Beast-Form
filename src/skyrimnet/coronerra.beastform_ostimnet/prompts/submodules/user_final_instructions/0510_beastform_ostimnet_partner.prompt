@@ -1,4 +1,4 @@
-{# Beast Form OStimNet Bridge (That Guy (Coronerra)) for OStim Beast Form 1.0 (all cores: OStim_Beast_Form_Merged.esp or OStim_Beast_Form_TWO.esp). #}
+{# Beast Form OStimNet Bridge (That Guy (Coronerra)) for OStim Beast Form 1.1 (all cores: OStim_Beast_Form_Merged.esp or OStim_Beast_Form_TWO.esp). #}
 {# OStimNet lists only ActorTypeNPC races as "Available partners"; WerewolfBeastRace, DLC2WerebearBeastRace and DLC1VampireBeastRace lack it. #}
 {% if is_plugin_loaded("OStim_Beast_Form_Merged.esp") or is_plugin_loaded("OStim_Beast_Form_TWO.esp") %}
 {% if is_plugin_loaded("TT_OStimNet.esp") and npc.UUID != player.UUID %}

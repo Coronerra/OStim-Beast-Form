@@ -1,0 +1,20 @@
+{# Beast Aware (That Guy (Coronerra)), OStim Beast Form 1.1 (all cores): sits between 0400_appearance and 0410_equipment. #}
+{% if render_mode == "full" or render_mode == "thoughts" or render_mode == "transform" or render_mode == "dialogue_target" %}
+    {% set ba_race = decnpc(actorUUID).race %}
+    {% set ba_form = "" %}
+    {% if ba_race == "Werewolf" %}
+        {% set ba_form = "werewolf form: a towering, fur-covered beast far too large for any clothing or armor to fit" %}
+        {% set ba_seen = "a huge, hairy werewolf" %}
+    {% elif ba_race == "Werebear" %}
+        {% set ba_form = "werebear form: a massive, shaggy, bear-like beast far too large for any clothing or armor to fit" %}
+        {% set ba_seen = "a huge, shaggy werebear" %}
+    {% elif ba_race == "Vampire Lord" %}
+        {% set ba_form = "Vampire Lord form: their body has grown and changed into a vampire lord form with wings, far too large for any clothing or armor to fit" %}
+        {% set ba_seen = "a huge vampire lord with wings" %}
+    {% endif %}
+    {% if ba_form != "" %}
+        ### Current Form (replaces normal appearance)
+        {{ decnpc(actorUUID).name }} is in {{ ba_form }}. Any human appearance described above is their normal form, not what is seen right now. Being unclothed is natural for this form, and their body is fully exposed. Anyone nearby sees {{ ba_seen }} and reacts to that (fear, awe, desire, or whatever fits them), and would not scold them for lacking clothes the way they would a naked human.
+        {{ decnpc(actorUUID).name }}'s current size, arousal and number of climaxes in this form are given in the most recent beastaware_player_form event; treat those as true right now. A bigger size makes them more imposing and harder to ignore, and a higher arousal shows openly in their body, breathing and focus. Each climax in this form leaves them more sated or more insatiable, whichever fits them, and the people around them notice and respond to it.
+    {% endif %}
+{% endif %}

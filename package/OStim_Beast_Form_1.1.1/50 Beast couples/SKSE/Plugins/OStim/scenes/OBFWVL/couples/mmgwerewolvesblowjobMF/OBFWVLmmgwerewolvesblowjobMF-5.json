@@ -1,0 +1,61 @@
+{
+    "name": "HCoS Werewolves Blowjob 5 [male-first order]",
+    "modpack": "OBeastLite",
+    "length": 21.666666,
+    "speeds": [
+        {
+            "animation": "WVL_mmgwerewolvesblowjob_S5"
+        }
+    ],
+    "actors": [
+        {
+            "type": "Werewolf",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 1
+        },
+        {
+            "type": "Werewolf",
+            "intendedSex": "female",
+            "tags": [
+                "climaxing"
+            ],
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "blowjob",
+            "actor": 1,
+            "target": 0,
+            "performer": 1
+        }
+    ],
+    "tags": [
+        "hcos",
+        "creature",
+        "cc",
+        "samerace",
+        "a1",
+        "a2",
+        "werewolf",
+        "standing",
+        "loving",
+        "romantic",
+        "packbeastcouples",
+        "converted",
+        "slal",
+        "transition",
+        "blowjob",
+        "oral",
+        "femwerewolf",
+        "obfmalefirst"
+    ],
+    "noRandomSelection": true,
+    "destination": "OBFWVLmmgwerewolvesblowjobMF-4"
+}

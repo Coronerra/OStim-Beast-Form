@@ -1,6 +1,129 @@
-OStim Beast Form changelog - That Guy (Coronerra)
-From 1.0.1 this repository (Coronerra/OStim-Beast-Form) is the main one again; Merged, TWO Edition, TWO Patch and TWO Herm Patch are superseded.
-Release 1.0.2 also carries: WVL 0.3.1 Patch 0.2 (animation patch for Werewolf and Vampire Lord OStim 0.3.1), Softbody / Tullius Patches 1.0.2 (readme only), Herm / Futa Patch 1.0.1 (unchanged), Ostrands with Werewolves 0.8.0.3.
+OStim Beast Form 1.1.1 - FINAL RELEASE
+This is the last release. The author is stepping away and leaving the mod
+with the community: anyone may modify, reupload, fork or build on it, as
+long as the existing permission credits (Billyy, Frosferes and any other
+credited authors) stay in place. Provided as-is, no further support. See the
+notice and permissions at the top of README_OStim_Beast_Form.txt.
+Same plugin names and FormIDs as 1.1.0; saves keep working.
+- OCreatures detection: Beast Form now looks for OCreatures by its base
+  plugin (OCreatures.esp). A plain OCreatures install and OCreatures
+  Reforged are both detected, so the start key, beast timer, cum load,
+  SkyrimNet state note, size menu and combat pause step aside for either.
+  A load order with only the Reforged Menu plugin still counts. No DLL is
+  checked. OCreatures is never required. The custom-bodies option and the
+  bBody=0 ini check stay Reforged-only, because only Reforged has that ini.
+- Final release: NOTICE and PERMISSIONS added. The mod ships no animations
+  and no body meshes, so on its own it adds no sex scenes; you need a
+  werewolf / Vampire Lord OStim animation pack (or community-made scenes).
+- Lirael Atelier's Werewolf and Vampire Lord OStim pack is no longer
+  available. It was never required and is not shipped. The optional Beast
+  couples start poses were written to play her couple animations if you
+  still have the files; without a couple animation pack the buttons will
+  not animate. Download links and "recommended" wording removed.
+- Version strings now say 1.1.1.
+
+OStim Beast Form 1.1.0
+Framework release. Beast Form is an enabling framework: it ships no bodies,
+and anyone can make bodies for it. Same plugin names and FormIDs as 1.0.5;
+saves keep working. Going back to 1.0.5 is not supported.
+- Installer: one page for the four setups (Vanilla / TWO / Growl / Growl +
+  TWO), one extras page, an OCum script page that appears only with OCum,
+  and the acknowledgement. OCR start-pose stand-ins now install by
+  themselves when no OCreatures plugin is active. Credits fixed: this mod
+  credits only That Guy (Coronerra).
+- Interop: detects OCreatures Reforged and steps aside for the start key,
+  beast timer, beast cum load, SkyrimNet state, size menu and combat pause,
+  with MCM overrides per duty (Auto / Always ours / Never ours). Other mods
+  can claim a duty with the OBF_Claim ModEvent.
+- Hooks for other authors: ModEvents (OBF_Ready, OBF_SceneStart/End,
+  OBF_TimerPaused/Resumed, OBF_Feed, OBF_SizeChanged, OBF_BodyReport,
+  OBF_StateChanged; in: OBF_Claim, OBF_RequestSize, OBF_RequestStart) and
+  JSON files (kinds, sizes, directions, arousal). New Extension Guide.
+- Safety: every path that picks or adds an actor now runs one child check
+  (vanilla flag, OStim's check, race name) and a last sweep over the final
+  actor list before OStim is asked to start a scene.
+- Icons: 33 icons in Beast Form's own folder, used by its own couples
+  scenes; optional icons at the shared paths the Werewolf and Vampire Lord
+  scene packs point at.
+- Female body: a read-only diagnostic (MCM Body page, log, OBF_BodyReport)
+  that reports whether the beast has a female body and breast / genital
+  bones. Physics contract, reference configuration and BodySlide notes in
+  the docs. "Use Riotguard/custom bodies even with OCR" option (installer
+  and MCM) with the one-line OCR setting it needs.
+- Combat pause (off by default), climax feeds the beast timer (a few
+  minutes per climax, capped), gesture start key (off by default), anatomy
+  size menu (off by default, visual size only).
+- SkyrimNet: Beast Aware adds size, arousal band and climax count to the
+  state note.
+- Animation reminder: one message after installing or updating to run
+  Pandora or Nemesis.
+- MCM: new pages Key, Combat, Feeding, Size, Interop, Body. One MCM script
+  for every setup (the Growl werebear toggle shows only with the Growl
+  core). MCM version 110: SkyUI rebuilds the pages on 1.0.5 saves.
+- OCum script variants (Tull / Liquid Pack, GT Softbody) are now chosen in
+  this installer (same scripts as the 1.0.3 patch).
+- Version strings now say 1.1.0.
+
+OStim Beast Form 1.0.5
+- Bodies: this mod ships NO body meshes any more. Werewolf and werebear
+  bodies come from a body set installed at the stock vanilla paths
+  (meshes\actors\werewolfbeast\character assets\ and
+  meshes\actors\dlc02\werebear\) with the file names vanilla, Growl and
+  TWO use. A body set must win over Growl, TWO and Monster Lipsync in
+  MO2. Without one, the same paths resolve to TWO / Growl / vanilla, so
+  nothing goes missing.
+- Plugins: the female werewolf body addon and the aroused werewolf cock
+  now point at the stock TWO paths (femalebodywerewolf_1.nif,
+  CreatureFramework\CanineRedHard.nif) in every core. These are the same
+  paths the 1.0.4 "TWO stock female body" choice used. FormIDs unchanged.
+- Installer: the "Female werewolf body" page and the converted softbody
+  body, cock, SMP files and BodySlide set are removed.
+- Aroused werebear: still MoreNastyCritters\werebear\werebearHard.nif
+  (a shared path, not this mod's own); a body set can supply it.
+- Kept from 1.0.4: Up Arrow default hotkey, OCum werewolf load, hubs,
+  SkyrimNet / Beast Aware fixes.
+- Version strings now say 1.0.5.
+
+OStim Beast Form 1.0.4
+- Start-scene hotkey now defaults to Up Arrow on new games (it was
+  unbound). Existing saves keep their stored key. MCM "reset to default"
+  sets Up Arrow; the unmap button still unbinds.
+- Fix: Beast Pie could wait forever if a beast-form partner stayed
+  unloaded in another cell. The hold now gives up after 30 minutes, or
+  after 20 checks (about a minute) with the partner unloaded. Logged.
+- Fix: Beast Aware no longer calls SkyrimNet when SkyrimNet is missing or
+  the feature is off (no more Papyrus errors on every transform). The 30s
+  state refresh only runs while SkyrimNet is present, the mod and "state
+  context" are on, and you are in beast form.
+- Fix: Beast Aware recognises forms by race form and keyword, not
+  English names, and survives a missing race. Werebear (Dragonborn) is
+  detected by form. Growl's human-looking Lycanthrope alternate races are
+  not treated as beast form.
+- Fix: the scene hotkey finds the closest valid NPC in front of you
+  (one cell scan, PapyrusUtil) instead of up to 12 random picks. Child
+  checks unchanged.
+- Fix: the male check in the OStim hook uses the leveled actor base.
+- Version strings (log header, script headers) now say 1.0.4.
+- Werebear (Growl core): documented the two path families (exploration
+  at actors\dlc02\werebear, aroused at MoreNastyCritters\werebear); no
+  werebear assets are shipped. Plugins and FormIDs unchanged.
+- Source layout: canonical scripts under src/, build script instead of
+  committed package trees (see the repo docs).
+
+OStim Beast Form 1.0.3
+- The converted female werewolf body (stretchable canal) is now
+  buildable in BodySlide: new set "OBF TWO Softbody Female Body"
+  (CalienteTools\BodySlide), built from TWO's own "TWO Female Body"
+  slider data, output to coronerra\twosoftbody. Added to TWO's "TWO
+  Female" group, so TWO presets apply. Ships only this mod's set file,
+  group file and modified reference mesh; TWO's BodySlide files are
+  needed (not included).
+- Installer: "Converted softbody female body" is the default again for
+  TWO and Growl + TWO; "TWO stock female body" stays as a fallback.
+  Vanilla and Growl-only always use the converted body.
+- Plugins, scripts and meshes unchanged from 1.0.2 (same FormIDs).
+- Docs: BodySlide steps per setup; human partners need SMP genital
+  collision (TNG on 3BA SMP / BHUNP / GT Softbody, or SOS + SMP add-on).
 
 OStim Beast Form 1.0.2
 - Fix for TWO users: BodySlide presets for TWO's female werewolf body

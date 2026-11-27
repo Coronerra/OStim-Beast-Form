@@ -1,5 +1,5 @@
 Scriptname OBF_Log Hidden
-{OStim Beast Form 1.0.1 - own log file for bug reports: Data/SKSE/Plugins/OStimBeastForm.log (MO2: overwrite).
+{OStim Beast Form 1.1.1 - own log file for bug reports: Data/SKSE/Plugins/OStimBeastForm.log (MO2: overwrite).
 That Guy (Coronerra). Global functions only, no records, no polling. PapyrusUtil is a soft dependency:
 without it nothing is written and nothing errors. The MCM toggle lives in StorageUtil (key OBF_LogOff),
 so every script of the main file, the Softbody / Tullius patches and the Herm patch share it.
@@ -7,7 +7,7 @@ The file restarts after 10 game loads (counter in StorageUtilData/OStimBeastForm
 game load writes at most 2000 lines.}
 
 string Function Version() global
-	return "1.0.1"
+	return "1.1.1"
 EndFunction
 
 string Function LogPath() global

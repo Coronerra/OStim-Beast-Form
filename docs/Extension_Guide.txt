@@ -1,0 +1,205 @@
+OStim Beast Form 1.1.1 (final release): Extension Guide
+by That Guy (Coronerra)
+
+This is the final release. The author has left the project with the
+community; see the NOTICE and PERMISSIONS at the top of
+README_OStim_Beast_Form.txt. Anyone may modify, reupload, fork or build on
+it, keeping the existing permission credits in place. This guide is the
+contract for whoever carries it on.
+
+=====================================================================
+0. THE FRAMEWORK, AND AN INVITATION
+=====================================================================
+OStim Beast Form is an enabling framework. It ships no bodies and no sex
+animations. The Riotguard body pack is the first body set built on it, not
+the only one and not a requirement. Anyone can make bodies, animations,
+patches and hubs for it; this guide is the contract.
+
+What a body author gets:
+- stock vanilla paths that every plugin of this mod already points at
+- ModEvents to listen to and to send, and JSON files to edit
+- a path contract for BodySlide output
+- a breast-physics contract and a reference configuration
+- no DLL, no private folder layout, no required skeleton from this mod
+
+=====================================================================
+1. WHAT BEAST FORM SHIPS AND DOES NOT SHIP
+=====================================================================
+Ships: plugins (armor addons at stock paths, race and head records for the
+Vanilla core), scripts, MCM, scene files for its own start poses and
+couples, icons, JSON defaults, docs, SkyrimNet files.
+Does not ship: body meshes, skeletons, textures of other authors,
+collision meshes or physics collision files, animations other than the
+few attributed in Lite_animation_attribution.txt. For sex scenes you need
+a werewolf / Vampire Lord OStim animation pack (or community-made scenes).
+
+=====================================================================
+2. PATH TABLE (what wins at each path in MO2)
+=====================================================================
+Werewolf   meshes\actors\werewolfbeast\character assets\
+             malebodywerewolf_0.nif / _1.nif (+ .tri)
+             femalebodywerewolf_0.nif / _1.nif (+ .tri)
+             skeleton.nif
+             CreatureFramework\CanineRedHard.nif   (aroused cock)
+             CreatureFramework\AddonEmpty.nif
+             HeadParts\
+Werebear   meshes\actors\dlc02\werebear\body\werebear.nif
+             meshes\actors\dlc02\werebear\body\werebear_female.nif
+             head files per Growl / Monster Lipsync
+           aroused / scene body (shared path):
+             meshes\MoreNastyCritters\werebear\werebearHard.nif
+Vampire    meshes\actors\vampirelord\character assets\body\vampirelord.nif
+             ...\vampirelordfemale.nif   (vanilla Dawnguard paths)
+In MO2, the mod LOWEST in the left pane wins a conflict. Put a body set
+below Beast Form, Growl, TWO and Monster Lipsync.
+Our own coronerra\... folders exist only for head .tri files and the
+optional sheath add-on, and can be replaced.
+
+=====================================================================
+3. MAKING A BODY
+=====================================================================
+- Build in BodySlide, output to the stock file names above. Keep the .tri
+  that matches the nif.
+- Female werewolf and werebear bodies: two breasts only (remove the lower
+  pairs).
+- Aroused swaps are ordinary armor-addon records you can override from
+  your own plugin (load after Beast Form):
+    NakedTorsoWerewolfBeast        0x0CDD87 (Skyrim.esm record, overridden
+                                   by every core; male and female slots)
+    OBL_WerewolfAddonAA            0x6000833 (Vanilla core, ESL) /
+                                   0x8000833 (TWO and Growl cores)
+    OBL_WerebearArousedAA          0x83F (Growl core)
+    OBFTWO_WerewolfSheathAA        0x9000801 (Growl + TWO addon)
+  Repoint a model path or add slots; do not change FormIDs or editor IDs,
+  saves use them. The aroused vampire lord and werebear swaps are applied
+  to MALE actors only, by script.
+- Bones body authors can rely on come from the TWO 4.1 werewolf skeleton
+  (also used by Growl werebears): cock chain WWD 1 to 9, the genital chain
+  NPC GenitalsBase / Genitals01 to 06, female NPC L/R Pussy01-02,
+  VaginaB / VaginaB1, VaginaDeep, anus NPC LT/RT/LB/RB Anus1-2, breasts
+  NPC L/R Breast with Breast01 and the P1 to P3 chains, tongue WWTongue
+  Base and WWTongue 2 to 5, and NPC Jaw. Vanilla werebear and the vanilla
+  vampire lord skeleton lack some of these; check before you skin.
+
+=====================================================================
+4. PHYSICS CONTRACT
+=====================================================================
+A body mesh names its own physics (SMP) file in its extra data; the file
+names bones and shapes. So Beast Form alone cannot switch physics on.
+- Skin female werewolf and Growl werebear bodies to the breast bones
+  above and point your nif at your own physics file.
+- Docs\OStim Beast Form\Physics\ has a reference breast-chain
+  configuration written for the standard bone names (our own values; copy
+  it, do not rely on it as shipped; it sits outside SKSE\Plugins so it is
+  inert) and the technique for bones that live inside a body mesh.
+- Female vampire lord: the vanilla vampire lord skeleton has no breast
+  bones. A body author can embed their own uniquely named physics bones in
+  the body mesh and drive them from a physics file; this needs no skeleton
+  override.
+- CBPC users: same bones; the config is yours.
+- Collision (tongue, body) is the body author's choice and is not part of
+  Beast Form.
+The MCM Body page and the log report whether a beast actor has breast and
+genital bones (ModEvent OBF_BodyReport).
+
+=====================================================================
+5. ACTOR PROPERTIES (gender roles)
+=====================================================================
+SKSE\Plugins\OStim\actor properties\ holds OBLWerewolfMale/Female,
+OBLVampireLordMale/Female (and the Growl werebear files). They map the
+creature races to OStim gender roles so couples scenes work. Copy the
+pattern for a new race of the same kind.
+
+=====================================================================
+6. MODEVENTS
+=====================================================================
+Handler signature for every event: (string eventName, string strArg,
+float numArg, Form sender).
+
+We send (only when something happened; never periodic):
+  OBF_Ready         strArg "110"            after every load; re-send claims
+                                            (hook contract version; 1.1.1
+                                            still sends 110)
+  OBF_SceneStart    kind                    numArg thread id (player scene)
+  OBF_SceneEnd      kind
+  OBF_TimerPaused   kind                    numArg hours remaining
+  OBF_TimerResumed  kind                    numArg hours remaining
+  OBF_Feed          kind                    numArg hours added
+  OBF_SizeChanged   size label              numArg multiplier, sender actor
+  OBF_BodyReport    kind,flags              flags: female, male,
+                                            breastbones, genitalbones
+  OBF_StateChanged  "mask"                  numArg claim bitmask
+kind is werewolf, werebear, vampirelord or none.
+
+We accept:
+  OBF_Claim         strArg duty, numArg 1 claim / 0 release
+                    duties: key, timer, load, size, prompt, combat
+                    (femalebody is informational)
+  OBF_RequestSize   strArg size label (or empty), numArg scale
+                    (0 = use the label), sender = the actor
+  OBF_RequestStart  strArg up / down / left / right or empty,
+                    sender = the target actor
+No event can bypass a child check: OBF_RequestStart goes through the
+same refusals as the key.
+
+Papyrus listen example:
+  Event OnInit()
+      RegisterForModEvent("OBF_SceneStart", "OnBeastSceneStart")
+      RegisterForModEvent("OBF_Ready", "OnBeastReady")
+  EndEvent
+  Event OnBeastSceneStart(string eventName, string kind, float tid, Form sender)
+      Debug.Trace("beast scene: " + kind)
+  EndEvent
+  Event OnBeastReady(string eventName, string version, float n, Form sender)
+      ; claims are cleared on every load: send yours again here
+      int h = ModEvent.Create("OBF_Claim")
+      ModEvent.PushString(h, "size")
+      ModEvent.PushFloat(h, 1.0)
+      ModEvent.PushForm(h, None)
+      ModEvent.Send(h)
+  EndEvent
+
+=====================================================================
+7. JSON FILES
+=====================================================================
+Folder: Data\SKSE\Plugins\StorageUtilData\OStimBeastForm\ (PapyrusUtil
+JsonUtil format). Read at load and when needed.
+  kinds.json       extra races mapped to one of our three kinds, by
+                   plugin name plus decimal FormID (never by name text):
+                   stringList werewolf_plugins + intList werewolf_ids,
+                   the same for werebear and vampirelord. Cannot add new
+                   kinds.
+  sizes.json       stringList labels, floatList scales (1 to 12 steps,
+                   clamped 0.5 to 2.0), optional stringList nodes (the
+                   root bones to scale).
+  directions.json  per slot up / down / left / right: "<slot>_actions"
+                   (OStim action types, comma separated) and
+                   "<slot>_label".
+  arousal.json     ints low, mid, high: thresholds for the SkyrimNet
+                   arousal band.
+
+=====================================================================
+8. LOAD ORDER
+=====================================================================
+Body set below Beast Form, Growl, TWO and Monster Lipsync (MO2). Plugins:
+override records after Beast Form. With OCreatures (original or Reforged)
+installed, overlapping Beast Form features step aside; see the README.
+
+=====================================================================
+9. CREDITS EXPECTATIONS
+=====================================================================
+Credit the authors of the meshes, textures and physics you ship. A body
+set built on Beast Form should say so, and should not claim to be part of
+it. Beast Form credits only That Guy (Coronerra). Keep the existing
+permission credits (Billyy, Frosferes and any other credited authors) in
+place if you republish this mod.
+
+=====================================================================
+10. WORKED EXAMPLE: THE RIOTGUARD BODY PACK
+=====================================================================
+The Riotguard body pack is one way to build a body set on the framework:
+male and female werewolf and werebear meshes at the stock paths, a small
+installer, physics files, BodySlide projects. Treat it as an example, not
+the standard. If you publish your own set: say which paths you
+overwrite, which skeleton you assume, what physics you carry, how to order
+it in MO2, and credit your sources.

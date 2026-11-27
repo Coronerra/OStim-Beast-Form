@@ -1,0 +1,66 @@
+{
+    "name": "HCoS Vampire on Vampire 5 [male-first order]",
+    "modpack": "OBeastLite",
+    "length": 6,
+    "navigations": [
+        {
+            "destination": "OBFWVLmmgvamponvampMF-6",
+            "description": "Next(climax)",
+            "icon": "OStim/symbols/climax"
+        },
+        {
+            "destination": "OBFWVLCCVLHubMF",
+            "description": "Return",
+            "icon": "OStim/symbols/return"
+        }
+    ],
+    "speeds": [
+        {
+            "animation": "WVL_mmgvamponvamp_S5"
+        }
+    ],
+    "actors": [
+        {
+            "type": "VampireLord",
+            "intendedSex": "male",
+            "requirements": [
+                "penis"
+            ],
+            "autoTransitions": {
+                "climax": "OBFWVLmmgvamponvampMF-6"
+            },
+            "animationIndex": 1
+        },
+        {
+            "type": "VampireLord",
+            "intendedSex": "female",
+            "autoTransitions": {
+                "climax": "OBFWVLmmgvamponvampMF-6"
+            },
+            "animationIndex": 0
+        }
+    ],
+    "actions": [
+        {
+            "type": "vaginalsex",
+            "actor": 0,
+            "target": 1,
+            "performer": 0
+        }
+    ],
+    "tags": [
+        "hcos",
+        "creature",
+        "cc",
+        "samerace",
+        "vampirelord",
+        "missionary",
+        "loving",
+        "romantic",
+        "packbeastcouples",
+        "converted",
+        "slal",
+        "vaginal",
+        "obfmalefirst"
+    ]
+}

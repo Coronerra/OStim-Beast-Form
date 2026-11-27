@@ -1,29 +1,24 @@
-OStim Beast Form 1.0.2: BodySlide and OBody (werewolves only)
+OStim Beast Form 1.1.1: BodySlide and OBody
 by That Guy (Coronerra)
 
-There is no werebear BodySlide anywhere, so this is about werewolves.
-
 BODYSLIDE
-- TWO ships its own BodySlide projects ("TWO Female Body", "TWO Male
-  Body"). Build them into a separate output mod placed BELOW TWO in MO2's
-  left pane.
-- Which female body you get depends on the installer:
-  * TWO (core B) and Growl + TWO: the "Female werewolf body" page.
-    "TWO's own female body (BodySlide works)" uses TWO's
-    femalebodywerewolf_0/1.nif, so your "TWO Female Body" build applies.
-    "Converted softbody female body" uses this mod's body in
-    coronerra\twosoftbody\, which is NOT part of TWO's project: a
-    BodySlide build doesn't change it (it keeps TWO's morph names, so
-    in-game morphs still work on it).
-  * Vanilla (core A) and Growl only: always the converted body.
-- 1.0 and 1.0.1 always used the converted body, even without softbody,
-  so TWO BodySlide presets seemed to stop working. Fixed in 1.0.2: install
-  1.0.2 over it and pick "TWO's own female body". Your existing BodySlide
-  output mod works as is (no rebuild needed); keep it below TWO.
-- The male body is always TWO's own, so your BodySlide build applies to
-  males.
+- Beast Form ships no body and no BodySlide set. It is a framework: it
+  points at the stock vanilla paths, so any body set can be built and
+  dropped in. The Riotguard body pack is the first set built on it; it is
+  one set among what others can make.
+- Build your werewolf and werebear bodies from your body mod's own
+  BodySlide projects or, without one, TWO's "TWO Female Body" and
+  "TWO Male Body". They build to the stock paths:
+  meshes\actors\werewolfbeast\character assets\femalebodywerewolf_0/_1.nif
+  and malebodywerewolf_0/_1.nif; werebears:
+  meshes\actors\dlc02\werebear\body\werebear.nif and werebear_female.nif.
+  Tick "Build Morphs" for OBody.
+- Female bodies: two breasts only. Remove the lower pairs.
+- Put the BodySlide output mod below Beast Form, Growl, TWO and Monster
+  Lipsync in the MO2 left pane.
+- Physics: see Docs\OStim Beast Form\Physics\ and the Extension Guide.
 - Heads: TWO's BodySlide head builds keep working with the BFA Heads
-  plugins (only the expression file changes, the head meshes are TWO's).
+  plugins (only the expression file changes).
 
 OBODY
 - The O menu opens on werewolves, but human presets do nothing on them.

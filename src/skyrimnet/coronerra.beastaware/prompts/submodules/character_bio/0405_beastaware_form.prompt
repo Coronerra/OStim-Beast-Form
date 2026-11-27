@@ -1,4 +1,4 @@
-{# Beast Aware (That Guy (Coronerra)), OStim Beast Form 1.0 (all cores): sits between 0400_appearance and 0410_equipment. #}
+{# Beast Aware (That Guy (Coronerra)), OStim Beast Form 1.1 (all cores): sits between 0400_appearance and 0410_equipment. #}
 {% if render_mode == "full" or render_mode == "thoughts" or render_mode == "transform" or render_mode == "dialogue_target" %}
     {% set ba_race = decnpc(actorUUID).race %}
     {% set ba_form = "" %}
@@ -15,5 +15,6 @@
     {% if ba_form != "" %}
         ### Current Form (replaces normal appearance)
         {{ decnpc(actorUUID).name }} is in {{ ba_form }}. Any human appearance described above is their normal form, not what is seen right now. Being unclothed is natural for this form, and their body is fully exposed. Anyone nearby sees {{ ba_seen }} and reacts to that (fear, awe, desire, or whatever fits them), and would not scold them for lacking clothes the way they would a naked human.
+        {{ decnpc(actorUUID).name }}'s current size, arousal and number of climaxes in this form are given in the most recent beastaware_player_form event; treat those as true right now. A bigger size makes them more imposing and harder to ignore, and a higher arousal shows openly in their body, breathing and focus. Each climax in this form leaves them more sated or more insatiable, whichever fits them, and the people around them notice and respond to it.
     {% endif %}
 {% endif %}
